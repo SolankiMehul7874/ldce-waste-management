@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLDCE — Campus Solid Waste Management System</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Minimalist Navbar -->
+  <header class="site-nav">
+    <div class="nav-brand" data-tab="home">
+      <div class="brand-icon">🌱</div>
+      <div class="brand-info">
+        <h1>EcoLDCE</h1>
+        <span>L. D. College of Engineering</span>
+      </div>
+    </div>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><button class="nav-link-btn active" data-tab="home">Home</button></li>
+        <li><button class="nav-link-btn" data-tab="audit">Waste Audit</button></li>
+        <li><button class="nav-link-btn" data-tab="streams">Waste Sorter</button></li>
+        <li><button class="nav-link-btn" data-tab="operations">Operations &amp; ROI</button></li>
+        <li><button class="nav-link-btn" data-tab="compost">Composter</button></li>
+        <li><button class="nav-link-btn" data-tab="admin">Admin <span id="adminBadgeCount" class="nav-counter" style="display:none;">0</span></button></li>
+        <li><button class="nav-link-btn" data-tab="about">About</button></li>
+      </ul>
+    </nav>
+
+    <div>
+      <button id="openAlertModalBtn" class="nav-cta-btn">
+        <span>🔔</span> Report Bin
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- VIEW 1: DEDICATED LANDING PAGE -->
+    <section id="view-home" class="view-section active">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-tag">
+          <span>⚡</span> Campus Circularity &bull; Smart Waste Telemetry
+        </div>
+        <h2>
+          Autonomous Solid Waste Segregation &amp; <span>Circular Recovery</span>
+        </h2>
+        <p>
+          A high-efficiency, 4-stream segregation architecture and aerobic composting network, 
+          driving an 88.5% landfill diversion rate with trilingual item guidance and real-time digital auditing.
+        </p>
+        
+        <div class="hero-actions">
+          <button class="btn-hero-primary" data-tab="audit">
+            <span>📊</span> Explore Live Audit
+          </button>
+          <button class="btn-hero-secondary" data-tab="streams">
+            <span>♻️</span> Waste Sorter Guide
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Highlight KPI Stats -->
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-number" id="statDiversion">88.5<span>%</span></div>
+          <div class="stat-name">Landfill Diversion Rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="statAccuracy">92.0<span>%</span></div>
+          <div class="stat-name">Segregation Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">₹1,672</div>
+          <div class="stat-name">Total Capital Cost (91% Saved)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" id="statCo2e">69.8<span>kg</span></div>
+          <div class="stat-name">CO₂e Emissions Abated</div>
+        </div>
+      </div>
+
+      <!-- How It Works Process Grid -->
+      <div class="section-head" style="margin-top:2rem;">
+        <h3>How Campus Circular Recovery Works</h3>
+        <p>A closed-loop 3-step operational methodology</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Source Segregation at Corridors</h4>
+          <p>Modular 4-stream stations with mechanical hands-free foot pedals and trilingual pictograms prevent waste commingling at the point of discard.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>In-Situ Composting &amp; Recycling</h4>
+          <p>Wet canteen scraps are turned into nutrient-rich organic compost with chaas starter; dry recyclables are routed to authorized AMC scrap processors.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Digital Audit Telemetry</h4>
+          <p>Corridor QR codes allow daily gravimetric logging, automatic diversion recalculation, and fill-level telemetry reporting.</p>
+        </div>
+      </div>
+
+      <!-- Feature Jump Cards Grid -->
+      <div class="section-head">
+        <h3>Platform Modules</h3>
+        <p>Explore real-time data, sorting tools, and project management assets</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" data-tab="audit">
+          <div>
+            <div class="feature-icon">📈</div>
+            <h4>Live Waste Audit Telemetry</h4>
+            <p>Inspect 14 days of empirical corridor weighings, stream compositions, and log new field audits with instant KPI calculation.</p>
+          </div>
+          <span class="feature-link">Open Audit Portal &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="streams">
+          <div>
+            <div class="feature-icon">🔍</div>
+            <h4>Bilingual Waste Sorter</h4>
+            <p>Instant lookup for 40+ campus items in English &amp; Gujarati with disposal rules and an interactive sorting game.</p>
+          </div>
+          <span class="feature-link">Launch Sorter &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="compost">
+          <div>
+            <div class="feature-icon">🧪</div>
+            <h4>Aerobic Composter Simulator</h4>
+            <p>Simulate Carbon-to-Nitrogen (C:N) ratios and moisture balance by adjusting Green canteen scraps vs Brown foliage.</p>
+          </div>
+          <span class="feature-link">Simulate Composting &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="operations">
+          <div>
+            <div class="feature-icon">📐</div>
+            <h4>Operations &amp; WBS Roadmap</h4>
+            <p>Critical Path 8-week Gantt schedule, 10 work packages with live status toggles, and risk mitigation protocols.</p>
+          </div>
+          <span class="feature-link">View Operations &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="operations">
+          <div>
+            <div class="feature-icon">💰</div>
+            <h4>Value Engineering &amp; ROI</h4>
+            <p>Detailed ₹1,672 itemized bill of materials delivering a 91% cost reduction compared to commercial bins.</p>
+          </div>
+          <span class="feature-link">Inspect Budget &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="admin">
+          <div>
+            <div class="feature-icon">🛡️</div>
+            <h4>Reported Bins &amp; Admin</h4>
+            <p>Housekeeping dispatch, incident management, and live corridor maintenance tracking.</p>
+          </div>
+          <span class="feature-link">Open Admin Console &rarr;</span>
+        </div>
+
+        <div class="feature-card" data-tab="about">
+          <div>
+            <div class="feature-icon">🏛️</div>
+            <h4>Project Team &amp; College Details</h4>
+            <p>Official student team roster, enrolment numbers, and Department of Information Technology information.</p>
+          </div>
+          <span class="feature-link">View Team Details &rarr;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: LIVE WASTE AUDIT -->
+    <section id="view-audit" class="view-section">
+      <div class="section-head">
+        <h3>Live Waste Audit &amp; Analytics</h3>
+        <p>Empirical gravimetric tracking and real-time corridor telemetry</p>
+      </div>
+
+      <div class="split-grid">
+        <!-- Audit Table -->
+        <div class="card table-responsive" style="padding:1.5rem;">
+          <h4 style="font-size:1.05rem; margin-bottom:1rem;">📋 14-Day Pilot Gravimetric Log</h4>
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th style="min-width:75px;">Timeline</th>
+                <th style="min-width:85px;">Wet (kg)</th>
+                <th style="min-width:85px;">Dry (kg)</th>
+                <th style="min-width:85px;">Inerts (kg)</th>
+                <th style="min-width:105px;">Contamination</th>
+                <th style="min-width:90px;">Diversion</th>
+                <th style="min-width:90px;">Accuracy</th>
+                <th style="min-width:210px;">Observations &amp; Notes</th>
+              </tr>
+            </thead>
+            <tbody id="auditTableBody">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Quick Log Form -->
+        <div class="card">
+          <h4 style="font-size:1.05rem; margin-bottom:0.8rem;">📱 Log Waste Entry</h4>
+          <form id="auditForm">
+            <input type="number" step="0.1" id="inputWet" class="form-input" placeholder="Wet Organic (kg)" required>
+            <input type="number" step="0.1" id="inputDry" class="form-input" placeholder="Dry Recyclable (kg)" required>
+            <input type="number" step="0.1" id="inputInert" class="form-input" placeholder="Landfill Inerts (kg)" required>
+            <input type="number" step="0.05" id="inputContam" class="form-input" placeholder="Contaminants Detected (kg)" required>
+            <input type="text" id="inputNotes" class="form-input" placeholder="Observations / Notes">
+
+            <div class="form-preview-grid">
+              <div><span>Total:</span> <strong id="previewTotal" style="color:#ffffff;">0.0 kg</strong></div>
+              <div><span>Diversion:</span> <strong id="previewDiversion" style="color:var(--accent-emerald);">0.0%</strong></div>
+              <div><span>Accuracy:</span> <strong id="previewAccuracy" style="color:var(--accent-blue);">0.0%</strong></div>
+              <div><span>CO₂e Saved:</span> <strong id="previewCo2" style="color:var(--accent-emerald);">0.0 kg</strong></div>
+            </div>
+
+            <button type="submit" class="btn-primary">Save Audit Entry</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="two-col-grid">
+        <div class="card">
+          <h4 style="font-size:1.05rem; margin-bottom:0.4rem;">🥧 Stream Breakdown</h4>
+          <div id="streamDonutChart"></div>
+        </div>
+        <div class="card">
+          <h4 style="font-size:1.05rem; margin-bottom:0.4rem;">📈 Daily Collection Trend</h4>
+          <div id="dailyInflowBarChart"></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1.5rem;">
+        <h4 style="font-size:1.05rem; margin-bottom:0.4rem;">🚀 Accuracy Progression (54% ➔ 92%)</h4>
+        <div id="accuracyTrendLine"></div>
+      </div>
+
+      <!-- Smooth Walkthrough Section Bottom Nav -->
+      <div class="section-nav-footer">
+        <button class="btn-nav-prev" data-tab="home">&larr; Back to Home</button>
+        <button class="btn-nav-next" data-tab="streams">Next: Waste Sorter &rarr;</button>
+      </div>
+    </section>
+
+    <!-- VIEW 3: WASTE CLASSIFIER & SORTER -->
+    <section id="view-streams" class="view-section">
+      <div class="section-head">
+        <h3>Campus Waste Sorter</h3>
+        <p>Trilingual item directory and interactive disposal challenge</p>
+      </div>
+
+      <!-- 4 Stream Cards Grid -->
+      <div class="streams-grid" id="streamsContainer">
+        <!-- Dynamically rendered by app.js -->
+      </div>
+
+      <div class="card" style="margin-bottom:2rem;">
+        <h4 style="font-size:1.1rem; margin-bottom:0.8rem;">🔍 Instant Item Lookup</h4>
+        <input type="text" id="classifierSearch" class="search-bar" placeholder="Search item (e.g. paper, chips, tea, battery, કાગળ, બોટલ)...">
+        <div class="classifier-list" id="classifierGrid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Sorting Quiz Game -->
+      <div class="card quiz-wrapper">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+          <div style="font-size:0.8rem; text-transform:uppercase; color:var(--text-tertiary); font-weight:700;">Sorting Challenge</div>
+          <span id="quizScoreText" class="enrolment-pill">Score: 0 pts</span>
+        </div>
+        <div style="font-size:1.4rem; font-weight:800; margin:0.4rem 0;" id="quizPrompt">Plastic Water Bottle</div>
+        <div style="font-size:0.9rem; color:var(--accent-emerald);" id="quizGujarati">પ્લાસ્ટિકની બોટલ</div>
+
+        <div class="quiz-btn-row">
+          <button class="quiz-btn quiz-bin-btn btn-green" data-stream="green">Green (Wet)</button>
+          <button class="quiz-btn quiz-bin-btn btn-blue" data-stream="blue">Blue (Recyclable)</button>
+          <button class="quiz-btn quiz-bin-btn btn-black" data-stream="black">Black (Inert)</button>
+          <button class="quiz-btn quiz-bin-btn btn-red" data-stream="red">Red (Hazardous)</button>
+        </div>
+
+        <div id="quizFeedback" style="margin-top:1rem; font-size:0.85rem; font-weight:600; padding:0.8rem; border-radius:var(--radius-sm); display:none;"></div>
+      </div>
+
+      <!-- Smooth Walkthrough Section Bottom Nav -->
+      <div class="section-nav-footer">
+        <button class="btn-nav-prev" data-tab="audit">&larr; Back to Waste Audit</button>
+        <button class="btn-nav-next" data-tab="operations">Next: Operations &amp; ROI &rarr;</button>
+      </div>
+    </section>
+
+    <!-- VIEW 4: OPERATIONS, WBS & ROI -->
+    <section id="view-operations" class="view-section">
+      <div class="section-head">
+        <h3>Operations &amp; Value Engineering</h3>
+        <p>Project execution roadmap, WBS work packages, and financial ROI</p>
+      </div>
+
+      <!-- Value Engineering Highlight -->
+      <div class="card" style="margin-bottom:2rem; background:linear-gradient(135deg, rgba(16,185,129,0.08), rgba(59,130,246,0.08)); border-color:rgba(16,185,129,0.3);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h4 style="font-size:1.2rem; color:#ffffff;">Value Engineering: 91% Capital Cost Reduction</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.2rem;">
+              Fabricated using salvaged 20L paint drums from campus stores for <strong>₹1,672</strong> vs commercial baseline of <strong>₹18,500</strong>.
+            </p>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:2rem; font-weight:800; color:var(--accent-emerald); white-space:nowrap;">
+            ₹16,828 Saved
+          </div>
+        </div>
+      </div>
+
+      <!-- Gantt Timeline -->
+      <div class="card" style="margin-bottom:2rem;">
+        <h4 style="font-size:1.05rem; margin-bottom:1rem;">⏱️ 8-Week Schedule &amp; Critical Path</h4>
+        <div class="gantt-container">
+          <div id="ganttRows">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+        <div class="gantt-legend">
+          <div class="gantt-legend-item">
+            <span class="gantt-dot" style="background:linear-gradient(90deg, #ef4444, #f97316);"></span>
+            <span>Critical Path (Float = 0 Days)</span>
+          </div>
+          <div class="gantt-legend-item">
+            <span class="gantt-dot" style="background:linear-gradient(90deg, #3b82f6, #06b6d4);"></span>
+            <span>Standard Schedule Path</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WBS Packages -->
+      <div class="card" style="margin-bottom:2rem;">
+        <h4 style="font-size:1.05rem; margin-bottom:1rem;">🌳 Work Breakdown Structure (WBS)</h4>
+        <div id="wbsContainer">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Itemized Budget & BOM -->
+      <div class="card" style="margin-bottom:2rem;">
+        <h4 style="font-size:1.05rem; margin-bottom:1rem;">💰 Itemized Value Engineering Bill of Materials (BOM)</h4>
+        <div class="table-responsive">
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th style="min-width:60px;">Sr.</th>
+                <th style="min-width:200px;">Item Description</th>
+                <th style="min-width:120px;">Category</th>
+                <th style="min-width:180px;">Procurement Source</th>
+                <th style="min-width:110px;">Cost (INR)</th>
+              </tr>
+            </thead>
+            <tbody id="budgetTableBody">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Risk Register -->
+      <div class="card">
+        <h4 style="font-size:1.05rem; margin-bottom:1rem;">🛡️ Project Risk Register &amp; Contingency Plans</h4>
+        <div id="riskCardsList">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Smooth Walkthrough Section Bottom Nav -->
+      <div class="section-nav-footer">
+        <button class="btn-nav-prev" data-tab="streams">&larr; Back to Waste Sorter</button>
+        <button class="btn-nav-next" data-tab="compost">Next: Composter &rarr;</button>
+      </div>
+    </section>
+
+    <!-- VIEW 5: COMPOSTING SIMULATOR -->
+    <section id="view-compost" class="view-section">
+      <div class="section-head">
+        <h3>Aerobic Composting Simulator</h3>
+        <p>Calculate optimal Carbon-to-Nitrogen (C:N) ratio for campus organic waste</p>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="card">
+          <h4 style="font-size:1.05rem; margin-bottom:1rem;">🎛️ Input Waste Fractions</h4>
+          
+          <div style="margin-bottom:1.5rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;">
+              <span>Green Waste (Food &amp; Canteen Peels):</span>
+              <strong id="greenValLabel" style="color:var(--accent-emerald);">4.0 kg</strong>
+            </div>
+            <input type="range" id="greenSlider" min="0.5" max="15" step="0.5" value="4.0" style="width:100%; accent-color:var(--accent-emerald);">
+          </div>
+
+          <div style="margin-bottom:1.5rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;">
+              <span>Brown Bulking (Dry Leaves &amp; Cardboard):</span>
+              <strong id="brownValLabel" style="color:var(--accent-amber);">2.0 kg</strong>
+            </div>
+            <input type="range" id="brownSlider" min="0.5" max="15" step="0.5" value="2.0" style="width:100%; accent-color:var(--accent-amber);">
+          </div>
+
+          <div style="font-size:0.8rem; color:var(--text-tertiary);">
+            Target: 25:1 to 30:1 C:N ratio for aerobic decomposition without odors.
+          </div>
+        </div>
+
+        <div class="card" id="simResultBox">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <div id="compostStaticSpecs" style="margin-top:1.5rem;"></div>
+
+      <!-- Smooth Walkthrough Section Bottom Nav -->
+      <div class="section-nav-footer">
+        <button class="btn-nav-prev" data-tab="operations">&larr; Back to Operations &amp; ROI</button>
+        <button class="btn-nav-next" data-tab="admin">Next: Admin &amp; Reported Bins &rarr;</button>
+      </div>
+    </section>
+
+    <!-- VIEW 6: ADMIN CONSOLE & REPORTED BINS -->
+    <section id="view-admin" class="view-section">
+
+      <!-- GATE 1: SECURE ADMIN LOGIN SCREEN (Default when not logged in) -->
+      <div id="adminLoginGate" class="admin-login-wrapper">
+        <div class="admin-login-card">
+          <div class="login-lock-badge">🔐</div>
+          <h3 style="font-size:1.35rem; color:#ffffff; margin-bottom:0.4rem; font-weight:800;">Admin &amp; Operations Sign In</h3>
+          <p style="font-size:0.84rem; color:var(--text-secondary); margin-bottom:1.6rem; line-height:1.5;">
+            Campus corridor bin dispatch &amp; estate housekeeping supervisor console.
+          </p>
+
+          <!-- Error Alert Banner -->
+          <div id="adminAuthError" class="auth-error-banner">
+            <span>⚠️</span>
+            <span id="adminAuthErrorMsg">Invalid credentials. Please verify username and password.</span>
+          </div>
+
+          <form id="adminLoginForm">
+            <div class="input-with-icon">
+              <span class="field-icon">👤</span>
+              <input type="text" id="adminUsername" class="form-input" placeholder="Admin Username (e.g. admin)" required autocomplete="username">
+            </div>
+
+            <div class="input-with-icon">
+              <span class="field-icon">🔑</span>
+              <input type="password" id="adminPassword" class="form-input" placeholder="Password" required autocomplete="current-password">
+              <button type="button" class="btn-toggle-pw" id="toggleAdminPasswordBtn" title="Show/Hide Password">👁️</button>
+            </div>
+
+            <button type="submit" id="adminSubmitBtn" class="nav-cta-btn" style="width:100%; justify-content:center; padding:0.8rem; font-size:0.92rem; border-radius:var(--radius-sm); border:none; cursor:pointer;">
+              Sign In to Admin Console &rarr;
+            </button>
+          </form>
+
+          <!-- Demo Credentials Helper for Evaluators & Reviewers -->
+          <div class="demo-credentials-box">
+            <div class="demo-title">
+              <span>📋 Evaluator Demo Credentials</span>
+              <span class="wbs-badge" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:0.65rem; padding:0.1rem 0.4rem;">Pre-Authorized</span>
+            </div>
+            <div class="demo-row">
+              <span>Username:</span>
+              <code>admin</code>
+            </div>
+            <div class="demo-row">
+              <span>Password:</span>
+              <code>admin123</code>
+            </div>
+            <button type="button" class="btn-demo-autofill" id="btnQuickDemoLogin">
+              <span>⚡</span> 1-Click Auto-Fill &amp; Sign In
+            </button>
+          </div>
+
+          <div style="margin-top:1.4rem; font-size:0.75rem; color:var(--text-tertiary); text-align:center;">
+            🔒 Department of Information Technology &bull; L. D. College of Engineering
+          </div>
+        </div>
+      </div>
+
+      <!-- GATE 2: AUTHENTICATED SUPERVISOR CONSOLE (Shown when logged in) -->
+      <div id="adminConsoleArea" style="display:none;">
+
+        <!-- Supervisor Session Header Bar -->
+        <div class="admin-auth-bar">
+          <div class="admin-user-info">
+            <div class="admin-avatar">🛡️</div>
+            <div>
+              <div style="font-size:0.92rem; font-weight:700; color:#ffffff; display:flex; align-items:center; flex-wrap:wrap; gap:0.4rem;">
+                <span class="admin-status-online"></span>
+                <span id="adminLoggedName">Estate &amp; SWM Supervisor</span>
+                <span class="wbs-badge completed" style="font-size:0.68rem; padding:0.15rem 0.5rem;" id="adminLoggedRole">Chief Housekeeping Admin</span>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.15rem;" id="adminLoggedDept">
+                Department of Information Technology &bull; L. D. College of Engineering
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:0.8rem;">
+            <button id="adminLogoutBtn" class="btn-admin-logout" title="Sign out of supervisor console">
+              <span>🚪</span> Sign Out
+            </button>
+          </div>
+        </div>
+
+        <div class="section-head" style="margin-bottom:1.5rem;">
+          <h3>Corridor Bin Operations &amp; Admin</h3>
+          <p>Real-time housekeeping dispatch, incident logs, and reported bin triage</p>
+        </div>
+
+        <!-- Live Admin Metrics -->
+        <div class="admin-metrics-grid">
+          <div class="admin-card">
+            <div style="font-size:0.78rem; text-transform:uppercase; color:var(--text-tertiary); font-weight:700;">Total Reports</div>
+            <div style="font-family:var(--font-mono); font-size:2rem; font-weight:800; color:#ffffff; margin:0.3rem 0;" id="metricTotalAlerts">0</div>
+            <div style="font-size:0.75rem; color:var(--text-tertiary);">Logged via Student QR Portal</div>
+          </div>
+          <div class="admin-card pending-card">
+            <div style="font-size:0.78rem; text-transform:uppercase; color:var(--accent-amber); font-weight:700;">Pending Action</div>
+            <div style="font-family:var(--font-mono); font-size:2rem; font-weight:800; color:var(--accent-amber); margin:0.3rem 0;" id="metricPendingAlerts">0</div>
+            <div style="font-size:0.75rem; color:var(--text-secondary);">Awaiting Supervisor Review</div>
+          </div>
+          <div class="admin-card dispatched-card">
+            <div style="font-size:0.78rem; text-transform:uppercase; color:var(--accent-blue); font-weight:700;">Dispatched</div>
+            <div style="font-family:var(--font-mono); font-size:2rem; font-weight:800; color:var(--accent-blue); margin:0.3rem 0;" id="metricDispatchedAlerts">0</div>
+            <div style="font-size:0.75rem; color:var(--text-secondary);">Housekeeper En Route</div>
+          </div>
+          <div class="admin-card resolved-card">
+            <div style="font-size:0.78rem; text-transform:uppercase; color:var(--accent-emerald); font-weight:700;">Resolved &amp; Cleared</div>
+            <div style="font-family:var(--font-mono); font-size:2rem; font-weight:800; color:var(--accent-emerald); margin:0.3rem 0;" id="metricResolvedAlerts">0</div>
+            <div style="font-size:0.75rem; color:var(--text-secondary);">Closed &bull; Handled Successfully</div>
+          </div>
+        </div>
+
+        <!-- Filter Controls Bar -->
+        <div class="admin-filter-bar">
+          <div class="admin-filter-tabs">
+            <button class="admin-filter-btn active" data-filter="all">All Incidents</button>
+            <button class="admin-filter-btn" data-filter="pending">Pending</button>
+            <button class="admin-filter-btn" data-filter="dispatched">Dispatched</button>
+            <button class="admin-filter-btn" data-filter="resolved">Resolved</button>
+          </div>
+
+          <div style="display:flex; gap:0.8rem; align-items:center;">
+            <input type="text" id="adminSearchInput" class="form-input" style="margin-bottom:0; padding:0.45rem 0.9rem; font-size:0.82rem; width:220px;" placeholder="Search location, name...">
+            <button id="adminNewIncidentBtn" class="nav-cta-btn" style="padding:0.45rem 0.9rem; font-size:0.8rem;">
+              <span>+</span> Log Incident
+            </button>
+          </div>
+        </div>
+
+        <!-- Alerts Incident Feed -->
+        <div id="adminAlertsList">
+          <!-- Rendered by app.js -->
+        </div>
+
+        <!-- Smooth Walkthrough Section Bottom Nav -->
+        <div class="section-nav-footer">
+          <button class="btn-nav-prev" data-tab="compost">&larr; Back to Composter</button>
+          <button class="btn-nav-next" data-tab="about">Next: About College Team &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 7: ABOUT SECTION (EXACT COLLEGE DETAILS AS REQUESTED) -->
+    <section id="view-about" class="view-section">
+      <div class="about-box">
+        <div class="about-header">
+          <h3>L. D. College of Engineering, Ahmedabad</h3>
+          <p>Department of Information Technology</p>
+          <div class="about-meta-row">
+            <span>Subject: <strong>Project Management</strong></span>
+            <span>Academic Year: <strong>2024–2026</strong></span>
+          </div>
+        </div>
+
+        <div style="font-size:0.82rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-tertiary); margin-bottom:0.5rem;">
+          Project Team Members
+        </div>
+
+        <table class="team-clean-table">
+          <thead>
+            <tr>
+              <th>Sr.</th>
+              <th>Student Name</th>
+              <th>Enrolment Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--text-tertiary);">1</td>
+              <td class="student-name">Harshil Bhagora</td>
+              <td><span class="enrolment-pill">250283116002</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-tertiary);">2</td>
+              <td class="student-name">Vyom Prajapati</td>
+              <td><span class="enrolment-pill">250283116008</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-tertiary);">3</td>
+              <td class="student-name">Mehul Solanki</td>
+              <td><span class="enrolment-pill">250283116014</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-tertiary);">4</td>
+              <td class="student-name">Heer Thakar</td>
+              <td><span class="enrolment-pill">250283116015</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-tertiary);">5</td>
+              <td class="student-name">Saumya Patel</td>
+              <td><span class="enrolment-pill">240280116122</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="guide-footer-note">
+          <div>
+            <span>Faculty Guide:</span> <strong>Prof. [Faculty Guide Name]</strong>
+          </div>
+          <div>
+            <span>Department:</span> <strong>Information Technology</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smooth Walkthrough Section Bottom Nav -->
+      <div class="section-nav-footer" style="max-width:740px; margin-left:auto; margin-right:auto;">
+        <button class="btn-nav-prev" data-tab="admin">&larr; Back to Admin</button>
+        <button class="btn-nav-next" data-tab="home">Back to Home &uarr;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Incident Modal -->
+  <div class="modal-backdrop" id="alertModal">
+    <div class="modal-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h4 style="font-size:1.1rem;">🔔 Report Bin Incident</h4>
+        <button id="closeAlertModalBtn" style="background:transparent; border:none; color:var(--text-secondary); font-size:1.4rem; cursor:pointer;">&times;</button>
+      </div>
+
+      <form id="alertForm">
+        <label style="font-size:0.8rem; font-weight:600; color:var(--text-secondary); display:block; margin-bottom:0.4rem;">Select Bin / Station Stream</label>
+        
+        <!-- Custom Dropdown Component (Eliminates OS white popup paint issues) -->
+        <div class="custom-select-container" id="binSelectWrapper">
+          <input type="hidden" id="alertBin" name="alertBin" value="Blue (Dry Recyclables)" required>
+          <div class="custom-select-trigger" id="binSelectTrigger" tabindex="0">
+            <div class="trigger-content">
+              <span class="stream-dot blue" id="selectedStreamDot"></span>
+              <span class="trigger-label" id="selectedStreamLabel">Blue Stream (Dry Recyclables)</span>
+            </div>
+            <span class="chevron-icon">▾</span>
+          </div>
+          <div class="custom-select-menu" id="binSelectMenu">
+            <div class="custom-select-item active" data-val="Blue (Dry Recyclables)" data-color="blue" data-name="Blue Stream (Dry Recyclables)">
+              <span class="stream-dot blue"></span>
+              <div>
+                <div class="item-title">Blue Stream (Dry Recyclables)</div>
+                <div class="item-subtitle">Papers, Notebooks, PET Bottles, Metal Cans</div>
+              </div>
+            </div>
+            <div class="custom-select-item" data-val="Green (Wet Organics)" data-color="green" data-name="Green Stream (Wet Waste)">
+              <span class="stream-dot green"></span>
+              <div>
+                <div class="item-title">Green Stream (Wet Waste)</div>
+                <div class="item-subtitle">Food Scraps, Fruit Rinds, Tea Leaves</div>
+              </div>
+            </div>
+            <div class="custom-select-item" data-val="Black (Landfill Inerts)" data-color="black" data-name="Black Stream (Landfill Inerts)">
+              <span class="stream-dot black"></span>
+              <div>
+                <div class="item-title">Black Stream (Landfill Inerts)</div>
+                <div class="item-subtitle">Wrappers, Dust, Degraded Non-recyclables</div>
+              </div>
+            </div>
+            <div class="custom-select-item" data-val="Pilot Aerobic Composter" data-color="amber" data-name="Pilot Aerobic Composter">
+              <span class="stream-dot amber"></span>
+              <div>
+                <div class="item-title">Pilot Aerobic Composter</div>
+                <div class="item-subtitle">Aeration issues, moisture imbalance, odors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="text" id="alertLocation" class="form-input" value="IT Department Ground Floor" placeholder="Location in Campus" required>
+        <input type="text" id="alertName" class="form-input" placeholder="Your Name" required>
+        <textarea id="alertNote" class="form-input" rows="3" placeholder="Describe the status or request..." required></textarea>
+        <button type="submit" class="btn-primary">Submit Report</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Minimalist Footer -->
+  <footer class="site-footer">
+    <p>
+      <strong>EcoLDCE</strong> &bull; L. D. College of Engineering, Ahmedabad &bull; Department of Information Technology
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

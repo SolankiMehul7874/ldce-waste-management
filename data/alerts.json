@@ -1,0 +1,44 @@
+[
+  {
+    "id": 4,
+    "type": "bin_report",
+    "bin": "Blue (Dry Recyclables)",
+    "location": "IT Department Ground Floor",
+    "reportedBy": "sdsd",
+    "status": "Pending Verification",
+    "timestamp": "24/10/2026, 9:05:03 pm",
+    "note": "dscff"
+  },
+  {
+    "id": 3,
+    "type": "bin_report",
+    "bin": "Pilot Aerobic Composter",
+    "location": "IT Department Ground Floor",
+    "reportedBy": "gncg",
+    "status": "Resolved",
+    "timestamp": "24/10/2026, 4:07:43 pm",
+    "note": "mghm",
+    "resolvedAt": "24/10/2026, 9:04:34 pm"
+  },
+  {
+    "id": 1,
+    "type": "fill_level",
+    "bin": "Blue (Dry Recyclables)",
+    "location": "IT Ground Floor Lobby",
+    "reportedBy": "Housekeeping Staff - Ramesh",
+    "status": "Resolved",
+    "timestamp": "2026-10-23 11:30 AM",
+    "note": "Cardboard cartons accumulated during lab submission; cleared and flattened for AMC scrap dispatch."
+  },
+  {
+    "id": 2,
+    "type": "compost_turn",
+    "bin": "Pilot Aerobic Composter",
+    "location": "IT Dept Courtyard",
+    "reportedBy": "Mehul Solanki (Audit Lead)",
+    "status": "Pending Verification",
+    "timestamp": "2026-10-24 09:15 AM",
+    "note": "Turned compost; added 400g crushed neem leaves to maintain 30:1 C:N ratio. Moisture: 58%.",
+    "resolvedAt": "24/10/2026, 9:04:36 pm"
+  }
+]

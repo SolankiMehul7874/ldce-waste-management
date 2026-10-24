@@ -1,0 +1,24 @@
+{
+  "name": "ldce-campus-waste-management",
+  "version": "1.0.0",
+  "description": "Design and Implementation of a Low-Cost Sustainable Solid Waste Segregation and Recycling System for Campus Waste Management - LDCE IT Sem-V Project Management",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  },
+  "keywords": [
+    "project-management",
+    "waste-segregation",
+    "sustainability",
+    "ldce",
+    "circular-economy",
+    "fullstack"
+  ],
+  "author": "Harshil Bhagora, Vyom Prajapati, Mehul Solanki, Heer Thakar, Saumya Patel",
+  "license": "ISC"
+}

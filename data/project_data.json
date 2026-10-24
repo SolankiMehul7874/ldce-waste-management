@@ -1,0 +1,517 @@
+{
+  "projectInfo": {
+    "title": "Design and Implementation of a Low-Cost Sustainable Solid Waste Segregation and Recycling System for Campus Waste Management",
+    "shortTitle": "LDCE Campus Circular Waste Management System",
+    "institution": "L. D. College of Engineering, Ahmedabad",
+    "parentBody": "Directorate of Technical Education, Government of Gujarat",
+    "department": "Department of Information Technology",
+    "degree": "Bachelor of Engineering (B.E.)",
+    "semester": "Semester V",
+    "course": "Project Management",
+    "courseCode": "BE05000481",
+    "academicYear": "2024–2025 / 2025–2026",
+    "facultyGuide": "Prof. [Faculty Guide Name], Assistant Professor, IT Dept",
+    "hod": "Dr. / Prof. [HOD Name], Head of IT Department",
+    "principal": "Dr. [Principal Name], Principal, LDCE",
+    "campusArea": "59 Acres",
+    "campusPopulation": "6,000+ Students, Faculty & Staff across 14 Departments",
+    "budgetCeiling": 1700,
+    "actualExpenditure": 1672,
+    "commercialCost": 18500,
+    "costSavingsPercentage": 90.96,
+    "scheduleDuration": "8 Weeks (56 Days)",
+    "pilotLocation": "Ground Floor Lobby & Corridor, IT Department Building",
+    "landfillDiversionRateAchieved": 88.5,
+    "segregationAccuracyAchieved": 92.0
+  },
+  "teamMembers": [
+    {
+      "name": "Harshil Bhagora",
+      "enrolmentNo": "250283116002",
+      "role": "Project Manager (PM Lead)",
+      "responsibility": "Project Charter, Scope Baseline, Stakeholder Approvals, Timeline & Budget Governance",
+      "email": "harshil.bhagora@ldce.ac.in",
+      "avatarColor": "#10b981"
+    },
+    {
+      "name": "Vyom Prajapati",
+      "enrolmentNo": "250283116008",
+      "role": "Fabrication & Hardware Lead",
+      "responsibility": "Scrap Sourcing, 20L Drum Degreasing, Enamel Painting, Hands-Free Foot-Pedal Linkage",
+      "email": "vyom.prajapati@ldce.ac.in",
+      "avatarColor": "#3b82f6"
+    },
+    {
+      "name": "Mehul Solanki",
+      "enrolmentNo": "250283116014",
+      "role": "Waste Audit & Composting Lead",
+      "responsibility": "Gravimetric Audits, C:N Composter Inoculation, Housekeeping Protocol & Recycler Logistics",
+      "email": "mehul.solanki@ldce.ac.in",
+      "avatarColor": "#06b6d4"
+    },
+    {
+      "name": "Heer Thakar",
+      "enrolmentNo": "250283116015",
+      "role": "IT & Digital Systems Lead",
+      "responsibility": "Google Forms/Sheets Architecture, QR-Code Placards, Web Dashboard & Mathematical Analytics",
+      "email": "heer.thakar@ldce.ac.in",
+      "avatarColor": "#8b5cf6"
+    },
+    {
+      "name": "Saumya Patel",
+      "enrolmentNo": "240280116122",
+      "role": "Quality Assurance & Safety Lead",
+      "responsibility": "Risk Register, PPE Protocols, SWM 2016 Regulatory Compliance, Final Quality Review",
+      "email": "saumya.patel@ldce.ac.in",
+      "avatarColor": "#f59e0b"
+    }
+  ],
+  "smartObjectives": [
+    {
+      "dimension": "Specific",
+      "target": "Design, fabricate, and deploy a low-cost, 3-stream segregation station using upcycled 20L commercial paint drums.",
+      "metric": "1 prototype unit installed in IT Dept corridor."
+    },
+    {
+      "dimension": "Measurable",
+      "target": "Achieve a minimum waste diversion rate of 80% away from municipal landfill, and achieve >85% student segregation accuracy.",
+      "metric": "Diversion Rate ≥ 80%, Segregation Accuracy ≥ 85%."
+    },
+    {
+      "dimension": "Achievable",
+      "target": "Utilize locally available scrap materials from campus stores and execute entire fabrication under ₹1,700 within student capabilities.",
+      "metric": "Total Expenditure ≤ ₹1,700 with zero expensive workshop machinery."
+    },
+    {
+      "dimension": "Relevant",
+      "target": "Align campus waste handling with Solid Waste Management Rules 2016, CPCB norms, and Ahmedabad Municipal Corporation bylaws.",
+      "metric": "Full statutory 3-stream/4-stream regulatory compliance."
+    },
+    {
+      "dimension": "Time-bound",
+      "target": "Execute all project phases—from charter initiation to pilot testing and final reporting—within an 8-week academic semester schedule.",
+      "metric": "Completion within exactly 8 academic weeks (56 calendar days)."
+    }
+  ],
+  "ishikawaRootCauses": [
+    {
+      "category": "Infrastructure / Equipment",
+      "causes": [
+        "Absence of multi-compartment color-coded receptacles in corridors",
+        "Rusted single bins without foot pedals causing hygienic reluctance",
+        "Lack of overhead weather canopies protecting receptacles"
+      ]
+    },
+    {
+      "category": "Process / Methods",
+      "causes": [
+        "Absence of Standard Operating Procedures (SOP) for housekeeping staff",
+        "No scheduled tie-up with authorized AMC recyclers or scrap aggregators",
+        "Commingled bags dumped into municipal compactor directly"
+      ]
+    },
+    {
+      "category": "Materials / Waste Streams",
+      "causes": [
+        "Proliferation of single-use snack wrappers and PET bottles during break hours",
+        "Mass paper discarding during exam submission and lab viva weeks",
+        "High moisture canteen food scraps mingling with dry cellulose paper"
+      ]
+    },
+    {
+      "category": "People / Behavioral",
+      "causes": [
+        "High general awareness among students but low disposal discipline",
+        "Cognitive overload: lack of trilingual Gujarati/Hindi pictorial cues",
+        "Absence of peer nudge mechanisms and green student volunteering"
+      ]
+    },
+    {
+      "category": "Measurement / Monitoring",
+      "causes": [
+        "Zero prior quantitative data on daily campus waste generation rates",
+        "Absence of metrics on contamination or recyclable recovery value",
+        "No digital logging mechanism for campus housekeeping"
+      ]
+    },
+    {
+      "category": "Environment / Climate",
+      "causes": [
+        "Ahmedabad high summer temperatures (>40°C) accelerating anaerobic odor",
+        "Monsoon rainwater intrusion degrading paper recyclability",
+        "Stray animal ingress into open corridor dustbins"
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "green",
+      "name": "Wet Organic Waste (લિલૉ કચરો)",
+      "color": "#10b981",
+      "badge": "Biodegradable",
+      "targetDestination": "Campus Aerobic Composting Pit / Soil Conditioning",
+      "accepted": [
+        "Cafeteria food leftovers, rice, rotis, curries",
+        "Vegetable trimmings, potato skins, onion peels",
+        "Fruit rinds (banana, orange peels, watermelon rind)",
+        "Used tea leaves & coffee grounds",
+        "Fallen dry garden leaves & grass clippings"
+      ],
+      "prohibited": [
+        "Plastic wrappers, bags, polythene",
+        "Aluminium foils, milk pouches",
+        "Glass bottles, metal cutlery",
+        "Sanitary napkins or medical wipes"
+      ],
+      "handlingProtocol": "Empty directly into bin. Operate foot pedal to avoid touching lid. Cleared daily by 4:00 PM for aerobic composting."
+    },
+    {
+      "id": "blue",
+      "name": "Dry Recyclable Waste (સુકો કચરો)",
+      "color": "#3b82f6",
+      "badge": "Recyclable",
+      "targetDestination": "Authorized AMC Scrap Recycler / Material Recovery",
+      "accepted": [
+        "Printed A4 assignment sheets, old notebooks, rough papers",
+        "Cardboard cartons, packaging boxes (flattened)",
+        "Crushed clean PET mineral water & beverage bottles",
+        "Aluminium soda cans, clean tin containers",
+        "Clean plastic containers (polypropylene / HDPE)"
+      ],
+      "prohibited": [
+        "Greasy food-stained pizza boxes or oily samosa wraps",
+        "Used tea paper cups with sugary liquids",
+        "Disposable face masks, medical wipes",
+        "Batteries, electronics, chemicals"
+      ],
+      "handlingProtocol": "Ensure items are dry and clean. Flatten cardboard cartons and crush PET bottles to conserve volumetric capacity."
+    },
+    {
+      "id": "black",
+      "name": "Non-Recyclable Rejects / Inerts (નકામો કચરો)",
+      "color": "#475569",
+      "badge": "Landfill Inerts",
+      "targetDestination": "Ahmedabad Municipal Corporation (AMC) Landfill",
+      "accepted": [
+        "Multi-layer metallized chip packets (Lays, Kurkure wrappers)",
+        "Wax-coated candy wrappers, soiled thermal receipts",
+        "Corridor sweeping dust and inert grit",
+        "Broken ceramic mugs, degraded non-recyclable laminates"
+      ],
+      "prohibited": [
+        "Clean white paper or corrugated boxes",
+        "Biodegradable food scraps or wet organic waste",
+        "Lead-acid or lithium dry cell batteries",
+        "Hazardous laboratory chemicals"
+      ],
+      "handlingProtocol": "This represents the sole stream destined for municipal landfill collection. Aim to minimize daily mass."
+    },
+    {
+      "id": "red",
+      "name": "Domestic Hazardous & E-Waste (જોખમી કચરો)",
+      "color": "#ef4444",
+      "badge": "Hazardous / E-Waste",
+      "targetDestination": "Authorized CPCB/GPCB E-Waste & Hazardous Facility",
+      "accepted": [
+        "Spent AA/AAA dry cell batteries, button cells",
+        "Fused LED/CFL bulbs and fluorescent tubes",
+        "Empty printer toner & ink cartridges",
+        "Sanitary napkins (securely wrapped in paper)",
+        "Broken laboratory glassware, discarded chemical containers"
+      ],
+      "prohibited": [
+        "General canteen food waste",
+        "Ordinary paper printouts or notebooks",
+        "Clean recyclable plastics"
+      ],
+      "handlingProtocol": "Handle with puncture-resistant nitrile gloves. Store in secure, locked bin prior to hazardous pickup."
+    }
+  ],
+  "auditLogs": [
+    { "day": 1, "date": "Day 1", "wetKg": 4.0, "dryRecyclableKg": 1.9, "nonRecyclableKg": 1.7, "contaminationKg": 1.2, "compostBatch": "Batch 1", "notes": "Baseline deployment. Significant cross-contamination observed." },
+    { "day": 2, "date": "Day 2", "wetKg": 4.1, "dryRecyclableKg": 2.1, "nonRecyclableKg": 1.6, "contaminationKg": 1.1, "compostBatch": "Batch 1", "notes": "Peer volunteers placed near kiosk during tea break." },
+    { "day": 3, "date": "Day 3", "wetKg": 3.9, "dryRecyclableKg": 2.3, "nonRecyclableKg": 1.5, "contaminationKg": 0.9, "compostBatch": "Batch 1", "notes": "Student briefing conducted in IT Dept lecture hall." },
+    { "day": 4, "date": "Day 4", "wetKg": 4.2, "dryRecyclableKg": 2.4, "nonRecyclableKg": 1.4, "contaminationKg": 0.8, "compostBatch": "Batch 1", "notes": "Bilingual signage QR placards verified functional." },
+    { "day": 5, "date": "Day 5", "wetKg": 4.3, "dryRecyclableKg": 2.5, "nonRecyclableKg": 1.2, "contaminationKg": 0.7, "compostBatch": "Batch 1", "notes": "First compost turning; added 500g dry neem leaves." },
+    { "day": 6, "date": "Day 6", "wetKg": 3.8, "dryRecyclableKg": 2.6, "nonRecyclableKg": 1.1, "contaminationKg": 0.6, "compostBatch": "Batch 1", "notes": "Saturday lab session; clean assignment paper collected." },
+    { "day": 7, "date": "Day 7", "wetKg": 3.5, "dryRecyclableKg": 2.2, "nonRecyclableKg": 0.9, "contaminationKg": 0.5, "compostBatch": "Batch 1", "notes": "End of week 1 audit; diversion rate climbed to 82%." },
+    { "day": 8, "date": "Day 8", "wetKg": 4.2, "dryRecyclableKg": 2.7, "nonRecyclableKg": 1.0, "contaminationKg": 0.5, "compostBatch": "Batch 2", "notes": "Week 2 kickoff. High adherence among Sem-V students." },
+    { "day": 9, "date": "Day 9", "wetKg": 4.4, "dryRecyclableKg": 2.9, "nonRecyclableKg": 0.9, "contaminationKg": 0.4, "compostBatch": "Batch 2", "notes": "Crushed PET bottle bin utilization increased." },
+    { "day": 10, "date": "Day 10", "wetKg": 4.1, "dryRecyclableKg": 3.0, "nonRecyclableKg": 0.8, "contaminationKg": 0.4, "compostBatch": "Batch 2", "notes": "Zero foul odor in wet bin; bio-enzyme spray applied." },
+    { "day": 11, "date": "Day 11", "wetKg": 4.5, "dryRecyclableKg": 3.1, "nonRecyclableKg": 0.8, "contaminationKg": 0.3, "compostBatch": "Batch 2", "notes": "Composter core temperature measured at 48°C (mesophilic)." },
+    { "day": 12, "date": "Day 12", "wetKg": 4.3, "dryRecyclableKg": 3.2, "nonRecyclableKg": 0.7, "contaminationKg": 0.3, "compostBatch": "Batch 2", "notes": "Cardboard flattening practice widely adopted." },
+    { "day": 13, "date": "Day 13", "wetKg": 4.2, "dryRecyclableKg": 3.3, "nonRecyclableKg": 0.7, "contaminationKg": 0.25, "compostBatch": "Batch 2", "notes": "Authorized AMC recycler audit inspection." },
+    { "day": 14, "date": "Day 14", "wetKg": 4.1, "dryRecyclableKg": 3.4, "nonRecyclableKg": 0.6, "contaminationKg": 0.2, "compostBatch": "Batch 2", "notes": "Final pilot day: 88.5% Diversion Rate, 92% Segregation Accuracy." }
+  ],
+  "wbsPackages": [
+    {
+      "code": "1.1.1",
+      "name": "Stakeholder Consultation & Institutional Permissions",
+      "assignedLead": "Harshil Bhagora (PM Lead)",
+      "duration": "5 Days",
+      "deliverable": "Written corridor deployment permission signed by HOD & Estate Officer",
+      "status": "Completed",
+      "category": "Initiation & Planning"
+    },
+    {
+      "code": "1.1.2",
+      "name": "Baseline Campus Waste Audit & Characterization",
+      "assignedLead": "Mehul Solanki (Waste Audit Lead)",
+      "duration": "7 Days",
+      "deliverable": "3-day baseline gravimetric dataset (% wet, dry recyclables, inerts)",
+      "status": "Completed",
+      "category": "Initiation & Planning"
+    },
+    {
+      "code": "1.1.3",
+      "name": "Regulatory Compliance Review & Standards Mapping",
+      "assignedLead": "Saumya Patel (QA & Safety Lead)",
+      "duration": "5 Days",
+      "deliverable": "Compliance checklist approved under SWM Rules 2016 and CPCB norms",
+      "status": "Completed",
+      "category": "Initiation & Planning"
+    },
+    {
+      "code": "1.2.1",
+      "name": "Station Layout, Aperture Ergonomics & Sizing",
+      "assignedLead": "Vyom Prajapati (Fabrication Lead)",
+      "duration": "5 Days",
+      "deliverable": "Dimensioned CAD layout drawings (850mm rim height, 150mm elevation)",
+      "status": "Completed",
+      "category": "Design & Engineering"
+    },
+    {
+      "code": "1.2.2",
+      "name": "Material Sourcing & Scrap Asset Salvage",
+      "assignedLead": "Vyom Prajapati (Fabrication Lead)",
+      "duration": "5 Days",
+      "deliverable": "3 discarded 20L paint drums, timber pallet & GI rods inspected",
+      "status": "Completed",
+      "category": "Procurement & Sourcing"
+    },
+    {
+      "code": "1.3.1",
+      "name": "Bin Surface Preparation, Priming & Enamel Coating",
+      "assignedLead": "Vyom Prajapati (Fabrication Lead)",
+      "duration": "6 Days",
+      "deliverable": "Abraded HDPE drums coated with synthetic primer & dual-coat enamel",
+      "status": "Completed",
+      "category": "Fabrication"
+    },
+    {
+      "code": "1.3.2",
+      "name": "Hands-Free Foot-Pedal Linkage & Base Skid Fabrication",
+      "assignedLead": "Vyom Prajapati (Fabrication Lead)",
+      "duration": "5 Days",
+      "deliverable": "Mechanical foot lever assembly tested >50 opening cycles",
+      "status": "Completed",
+      "category": "Fabrication"
+    },
+    {
+      "code": "1.4.1",
+      "name": "IT Digital Tracking System Setup (Google Forms & QR Placards)",
+      "assignedLead": "Heer Thakar (IT & Digital Lead)",
+      "duration": "6 Days",
+      "deliverable": "Live QR scan portal, Google Sheets automated formulas & analytics",
+      "status": "Completed",
+      "category": "Digital Systems"
+    },
+    {
+      "code": "1.4.2",
+      "name": "Pilot Aerobic Composter Bin Setup & Inoculum Priming",
+      "assignedLead": "Mehul Solanki (Waste Audit Lead)",
+      "duration": "4 Days",
+      "deliverable": "Perforated 5L composter with false drainage mesh, coco-peat & chaas inoculum",
+      "status": "Completed",
+      "category": "Composting"
+    },
+    {
+      "code": "1.5.1",
+      "name": "IT Dept Corridor Deployment, Orientation & 14-Day Audit",
+      "assignedLead": "Full Project Team (All 5 Leads)",
+      "duration": "14 Days",
+      "deliverable": "14-day daily weighing log, 88.5% diversion rate validation & final report",
+      "status": "Completed",
+      "category": "Pilot Execution"
+    }
+  ],
+  "ganttTasks": [
+    { "id": "T-01", "name": "Project Charter Formulation & Guide Signoff", "predecessors": "None", "duration": 5, "startDay": 1, "endDay": 5, "critical": true, "lead": "Harshil Bhagora" },
+    { "id": "T-02", "name": "Campus Baseline Waste Characterization Audit", "predecessors": "T-01", "duration": 7, "startDay": 6, "endDay": 12, "critical": true, "lead": "Mehul Solanki" },
+    { "id": "T-03", "name": "System Specifications & Department Approvals", "predecessors": "T-02", "duration": 5, "startDay": 13, "endDay": 17, "critical": false, "lead": "Harshil Bhagora" },
+    { "id": "T-04", "name": "Scrap Material Sourcing & Hardware Purchases", "predecessors": "T-03", "duration": 5, "startDay": 18, "endDay": 22, "critical": true, "lead": "Vyom Prajapati" },
+    { "id": "T-05", "name": "Bin Degreasing, Priming & Enamel Painting", "predecessors": "T-04", "duration": 6, "startDay": 23, "endDay": 28, "critical": true, "lead": "Vyom Prajapati" },
+    { "id": "T-06", "name": "Stencilling, Vinyl Labelling & Foot-Pedal Assembly", "predecessors": "T-05", "duration": 5, "startDay": 29, "endDay": 33, "critical": true, "lead": "Vyom Prajapati" },
+    { "id": "T-07", "name": "IT Digital Tracking System Setup (Forms/QR)", "predecessors": "T-03", "duration": 6, "startDay": 25, "endDay": 30, "critical": false, "lead": "Heer Thakar" },
+    { "id": "T-08", "name": "Pilot Aerobic Composter Bin Setup & Inoculum", "predecessors": "T-05", "duration": 4, "startDay": 30, "endDay": 33, "critical": false, "lead": "Mehul Solanki" },
+    { "id": "T-09", "name": "Deployment in IT Dept Lobby & Student Orientation", "predecessors": "T-06, T-07", "duration": 4, "startDay": 34, "endDay": 37, "critical": true, "lead": "Harshil Bhagora" },
+    { "id": "T-10", "name": "14-Day Pilot Audit, Data Analytics & Recycler Handover", "predecessors": "T-09", "duration": 14, "startDay": 38, "endDay": 51, "critical": true, "lead": "Full Team" }
+  ],
+  "raciMatrix": [
+    { "deliverable": "1. Project Charter & Scope Baseline", "harshil": "A / R", "vyom": "C", "mehul": "C", "heer": "C", "saumya": "C" },
+    { "deliverable": "2. Baseline Campus Waste Audit", "harshil": "I", "vyom": "C", "mehul": "A / R", "heer": "R", "saumya": "C" },
+    { "deliverable": "3. Scrap Sourcing & Procurement", "harshil": "C", "vyom": "A / R", "mehul": "C", "heer": "I", "saumya": "R" },
+    { "deliverable": "4. Station Fabrication & Painting", "harshil": "I", "vyom": "A / R", "mehul": "C", "heer": "I", "saumya": "R" },
+    { "deliverable": "5. Foot-Pedal Linkage Assembly", "harshil": "I", "vyom": "A / R", "mehul": "I", "heer": "I", "saumya": "C" },
+    { "deliverable": "6. Bilingual Signage & QR Placards", "harshil": "C", "vyom": "R", "mehul": "C", "heer": "A / R", "saumya": "C" },
+    { "deliverable": "7. IT Google Forms & Analytics Tool", "harshil": "I", "vyom": "I", "mehul": "C", "heer": "A / R", "saumya": "C" },
+    { "deliverable": "8. Aerobic Composter Bin Setup", "harshil": "I", "vyom": "C", "mehul": "A / R", "heer": "I", "saumya": "C" },
+    { "deliverable": "9. 14-Day Pilot Data Collection", "harshil": "A", "vyom": "C", "mehul": "R", "heer": "R", "saumya": "R" },
+    { "deliverable": "10. Recycler Handover & Final Report", "harshil": "A / R", "vyom": "C", "mehul": "R", "heer": "R", "saumya": "A / R" }
+  ],
+  "budgetItems": [
+    { "sr": 1, "item": "3x 20L Plastic Commercial Paint Buckets", "category": "Upcycled Scrap", "source": "Estate Store (Repurposed)", "rate": 0, "total": 0 },
+    { "sr": 2, "item": "Timber Pallet Scrap / Angle Iron Base Skid", "category": "Upcycled Scrap", "source": "Workshop Scrap", "rate": 0, "total": 0 },
+    { "sr": 3, "item": "1x 5L Plastic Bucket for Pilot Composter", "category": "Upcycled Scrap", "source": "Cafeteria Store", "rate": 0, "total": 0 },
+    { "sr": 4, "item": "Scrap GI Rods & Bicycle Cable for Foot Lever", "category": "Upcycled Scrap", "source": "Campus Workshop", "rate": 0, "total": 0 },
+    { "sr": 5, "item": "Synthetic Enamel Paint (Green, Blue, Black)", "category": "Purchased Consumables", "source": "Local Hardware Store", "rate": 360, "total": 360 },
+    { "sr": 6, "item": "Painting Brushes (2-in & 1-in) + Emery Paper", "category": "Purchased Consumables", "source": "Local Hardware Store", "rate": 110, "total": 110 },
+    { "sr": 7, "item": "Computer-Cut Vinyl Lettering & Stencils", "category": "Purchased Consumables", "source": "Signage Studio", "rate": 180, "total": 180 },
+    { "sr": 8, "item": "PP Fluted Canopy Sheet (3x2 ft) + Fasteners", "category": "Purchased Consumables", "source": "Stationery Depot", "rate": 140, "total": 140 },
+    { "sr": 9, "item": "Foot-Pedal Hardware (Hinges, Springs, Screws)", "category": "Purchased Consumables", "source": "Hardware Store", "rate": 120, "total": 120 },
+    { "sr": 10, "item": "Digital Hanging Luggage Scale (50kg / 10g precision)", "category": "Purchased Consumables", "source": "Electronics Vendor", "rate": 240, "total": 240 },
+    { "sr": 11, "item": "Safety Nitrile Gloves & Protective N95 Masks", "category": "Purchased Consumables", "source": "Medical Store", "rate": 160, "total": 160 },
+    { "sr": 12, "item": "Laminated A4 Informational Posters & QR Placards", "category": "Purchased Consumables", "source": "Campus Print Center", "rate": 120, "total": 120 },
+    { "sr": 13, "item": "Coco-Peat Brick (2kg) & Compost Microbial Culture", "category": "Purchased Consumables", "source": "Botanical Nursery", "rate": 90, "total": 90 }
+  ],
+  "budgetSummary": {
+    "subtotalPurchased": 1520,
+    "contingencyReservePercentage": 10,
+    "contingencyReserveAmount": 152,
+    "totalProjectBudget": 1672,
+    "commercialEquivalentCost": 18500,
+    "netSavingsINR": 16828,
+    "savingsPercentage": 90.96
+  },
+  "risks": [
+    {
+      "id": "R-01",
+      "description": "Cross-Contamination of Bins (e.g., wet food thrown into blue dry recyclable bin)",
+      "likelihood": 4,
+      "impact": 4,
+      "severity": 16,
+      "level": "High",
+      "mitigation": "High-contrast bilingual pictorial signage; foot-pedal color coding; daily morning spot-checks by team leads.",
+      "contingency": "Deploy student peer volunteers during peak tea hours (11:00 AM - 1:00 PM)."
+    },
+    {
+      "id": "R-02",
+      "description": "Student & Staff Apathy / Behavioral Resistance to Waste Segregation",
+      "likelihood": 4,
+      "impact": 3,
+      "severity": 12,
+      "level": "Medium",
+      "mitigation": "Classroom awareness campaign; visual infographics mounted at eye level (1.5m); gamified green recognition.",
+      "contingency": "Conduct 5-minute interactive awareness talk during departmental student club meetings."
+    },
+    {
+      "id": "R-03",
+      "description": "Foul Odor & Fruit Fly Infestation in Wet Organic Waste Bin",
+      "likelihood": 3,
+      "impact": 4,
+      "severity": 12,
+      "level": "Medium",
+      "mitigation": "Tight-fitting spring lid; mandatory daily clearing by 4:00 PM; periodic spray of diluted citronella/bio-enzyme.",
+      "contingency": "Transfer wet waste twice daily if corridor temperatures exceed 38°C."
+    },
+    {
+      "id": "R-04",
+      "description": "Anaerobic Putrefaction & Foul Leachate in Pilot Aerobic Composter",
+      "likelihood": 3,
+      "impact": 3,
+      "severity": 9,
+      "level": "Medium",
+      "mitigation": "Maintain optimal 30:1 C:N ratio using crushed dry neem leaves; turn compost twice weekly for aeration.",
+      "contingency": "Add dry shredded cardboard and coco-peat immediately if moisture exceeds 65%."
+    },
+    {
+      "id": "R-05",
+      "description": "Vandalism, Accidental Damage, or Physical Station Displacement",
+      "likelihood": 2,
+      "impact": 3,
+      "severity": 6,
+      "level": "Low",
+      "mitigation": "Station bolted securely to heavy timber skid; installed in CCTV-covered corridor opposite faculty rooms.",
+      "contingency": "Quick-swap spare hinges kept in IT Dept hardware locker."
+    },
+    {
+      "id": "R-06",
+      "description": "Paint Chipping or Adhesion Failure on Polyethylene (HDPE) Buckets",
+      "likelihood": 3,
+      "impact": 2,
+      "severity": 6,
+      "level": "Low",
+      "mitigation": "Surface pre-abraded using 120-grit emery sandpaper; synthetic anti-corrosive primer cured 12 hours prior to enamel.",
+      "contingency": "Touch-up spray cans stored for on-site maintenance."
+    },
+    {
+      "id": "R-07",
+      "description": "Failure or Unreliability in AMC Authorized Scrap Recycler Handover",
+      "likelihood": 2,
+      "impact": 4,
+      "severity": 8,
+      "level": "Medium",
+      "mitigation": "Pre-negotiated verbal agreement with licensed local AMC aggregator; secure dry departmental storage room.",
+      "contingency": "Secondary backup aggregator roster maintained across University Road area."
+    },
+    {
+      "id": "R-08",
+      "description": "Monsoon Rainwater Ingress Causing Paper Spoilage & Base Rot",
+      "likelihood": 2,
+      "impact": 3,
+      "severity": 6,
+      "level": "Low",
+      "mitigation": "Overhead sloped canopy (5° pitch); elevated base skid raised 150 mm on anti-corrosive rubber pads.",
+      "contingency": "Relocate station 2 meters deeper into enclosed corridor alcove during intense storms."
+    },
+    {
+      "id": "R-09",
+      "description": "Accidental Needle/Glass Injury or Pathogen Exposure to Waste Handlers",
+      "likelihood": 2,
+      "impact": 4,
+      "severity": 8,
+      "level": "Medium",
+      "mitigation": "Mandatory heavy-duty puncture-resistant nitrile gloves, N95 dust masks, and hand-tongs (no open bare-hand sorting).",
+      "contingency": "First-aid antiseptic kit and tetanus immunization verification in place."
+    },
+    {
+      "id": "R-10",
+      "description": "Budget Overrun due to Unforeseen Consumable Purchases",
+      "likelihood": 2,
+      "impact": 2,
+      "severity": 4,
+      "level": "Low",
+      "mitigation": "Strict 10% contingency reserve (₹152) pre-allocated; wholesale purchases from verified hardware vendors.",
+      "contingency": "Substitute any non-essential vinyl graphics with hand-stenciled enamel."
+    }
+  ],
+  "composterData": {
+    "optimalCNRatio": "25:1 to 30:1",
+    "currentTemperatureC": 48.5,
+    "moisturePercentage": 58,
+    "aerationFrequency": "Twice weekly (Mondays & Thursdays)",
+    "leachateCollectedMl": 120,
+    "greenNitrogenInputs": "Canteen fruit rinds, vegetable peels, leftover dal/rice, tea grounds",
+    "brownCarbonBulking": "Crushed dry neem/gulmohar leaves, shredded cardboard, coco-peat",
+    "inoculumUsed": "Diluted fermented buttermilk (chaas) + virgin fertile soil",
+    "totalHumusProducedKg": 14.8
+  },
+  "wasteItemClassifier": [
+    { "name": "Exam Answer Sheet / Rough Paper", "gujarati": "પરીક્ષાનું પેપર / રફ કાગળ", "stream": "blue", "streamName": "Dry Recyclable", "tip": "Keep dry and unsoiled. Flatten neatly." },
+    { "name": "Plastic Mineral Water Bottle (PET)", "gujarati": "પ્લાસ્ટિકની પાણીની બોટલ", "stream": "blue", "streamName": "Dry Recyclable", "tip": "Empty completely and crush to save space." },
+    { "name": "Aluminium Cold Drink Can", "gujarati": "એલ્યુમિનિયમ કોલ્ડ ડ્રિંક કેન", "stream": "blue", "streamName": "Dry Recyclable", "tip": "Rinse quickly and flatten if possible." },
+    { "name": "Amazon / Flipkart Cardboard Box", "gujarati": "કાર્ડબોર્ડ બોક્સ / પૂઠું", "stream": "blue", "streamName": "Dry Recyclable", "tip": "Remove plastic tape and flatten flat." },
+    { "name": "Ballpoint Pen Plastic Refill / Body", "gujarati": "બોલપેનની પ્લાસ્ટિક બોડી / રીફિલ", "stream": "blue", "streamName": "Dry Recyclable", "tip": "Clean plastic casing is recyclable." },
+    { "name": "Banana / Fruit Peels", "gujarati": "કેળા / ફળોની છાલ", "stream": "green", "streamName": "Wet Organic", "tip": "Excellent nitrogen source for our aerobic composter." },
+    { "name": "Canteen Leftover Rice & Roti", "gujarati": "કેન્ટીનનો વધેલો ભાત અને રોટલી", "stream": "green", "streamName": "Wet Organic", "tip": "Free of polythene bags, ready for microbial breakdown." },
+    { "name": "Used Tea Powder & Ginger Residue", "gujarati": "વપરાયેલી ચાની પત્તી અને આદુ", "stream": "green", "streamName": "Wet Organic", "tip": "High organic nitrogen, great compost accelerator." },
+    { "name": "Neem & Gulmohar Dry Leaves", "gujarati": "લીમડા અને ગુલમહોરના સુકા પાંદડા", "stream": "green", "streamName": "Wet Organic", "tip": "Carbon-rich brown material, balances wet moisture." },
+    { "name": "Multilayer Chips Packet (Kurkure/Lays)", "gujarati": "વેફર્સ / ચિપ્સનું મલ્ટી-લેયર પેકેટ", "stream": "black", "streamName": "Landfill Inerts", "tip": "Non-recyclable metalized film. Keep dry." },
+    { "name": "Soiled Samosa Grease Paper Wrapper", "gujarati": "તેલવાળું સમોસાનું કાગળ", "stream": "black", "streamName": "Landfill Inerts", "tip": "Oily food stains degrade cellulose fibers; route to inerts." },
+    { "name": "Corridor Floor Sweeping Dust", "gujarati": "ઓરડાનો કચરો / ધૂળ", "stream": "black", "streamName": "Landfill Inerts", "tip": "Inert sweepings for municipal AMC collection." },
+    { "name": "Spent Dry Cell Battery (AA/AAA)", "gujarati": "વપરાયેલ સેલ / બેટરી", "stream": "red", "streamName": "Hazardous / E-Waste", "tip": "Contains heavy metals; never mix with common bins!" },
+    { "name": "Fused LED Bulb / Fluorescent Tube", "gujarati": "બળી ગયેલો એલઇડી બલ્બ / ટ્યુબ", "stream": "red", "streamName": "Hazardous / E-Waste", "tip": "Hazardous mercury/electronic components. Secure carefully." },
+    { "name": "Printer Toner / Ink Cartridge", "gujarati": "પ્રિન્ટર ટોનર કાર્ટ્રીજ", "stream": "red", "streamName": "Hazardous / E-Waste", "tip": "Requires specialized authorized e-waste recycler pickup." },
+    { "name": "Sanitary Napkin (Wrapped in Paper)", "gujarati": "સેનિટરી નેપકિન (કાગળમાં વીંટેલું)", "stream": "red", "streamName": "Hazardous / E-Waste", "tip": "Sanitary domestic waste; route to designated red container." }
+  ]
+}

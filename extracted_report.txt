@@ -1,0 +1,1152 @@
+Total pages: 34
+
+=== PAGE 1 ===
+GOVERNMENT OF GUJARAT	
+DIRECTORATE OF TECHNICAL EDUCATION, GANDHINAGAR	
+L. D. COLLEGE OF ENGINEERING, AHMEDABAD	
+BACHELOR OF ENGINEERING (B.E.) — SEMESTER V	
+	
+	
+	
+	
+	
+――――――――――――――――――――――――――――――――――――――――
+―――――	
+PROJECT MANAGEMENT MICRO-PROJECT REPORT	
+DESIGN AND IMPLEMENTATION OF A LOW-COST SUSTAINABLE 
+SOLID WASTE SEGREGATION AND RECYCLING SYSTEM FOR 
+CAMPUS WASTE MANAGEMENT	
+	
+――――――――――――――――――――――――――――――――――――――――
+――――― 
+	
+	
+	
+	
+SUBMITTED BY:	
+1. Harshil Bhagora (Enrolment No: 250283116002)	
+2. Vyom Prajapati  (Enrolment No: 250283116008)	
+3. Mehul Solanki   (Enrolment No: 250283116014)	
+4. Heer Thakar      (Enrolment No: 250283116015)	
+5. Saumya Patel    (Enrolment No: 240280116122)	
+ 	
+
+=== PAGE 2 ===
+CERTIFICATE OF APPROVAL	
+DIRECTORATE OF TECHNICAL EDUCATION, GUJARAT STATE	
+L. D. COLLEGE OF ENGINEERING, AHMEDABAD — 380015	
+This is to certify that the Project Management Micro-Project Report entitled:	
+“DESIGN AND IMPLEMENTATION OF A LOW-COST SUSTAINABLE SOLID WASTE 
+SEGREGATION AND RECYCLING SYSTEM FOR CAMPUS WASTE MANAGEMENT”	
+is a bonafide record of work carried out by the following students of B.E. Semester V, Department of 
+Information Technology, L. D. College of Engineering, Ahmedabad, during the academic session [2024–2025 
+/ 2025–2026] in partial fulfillment of the requirements for the course of Project Management (Course Code: 
+BE05000481). 
+	
+Sr. No.	 Student Full Name	 GTU Enrolment Number	
+1	 Harshil Bhagora	 250283116002	
+2	 Vyom Prajapati 	 250283116008	
+3	 Mehul Solanki	 250283116014	
+4	 Heer Thakar	 250283116015	
+5	 Saumya Patel 	 240280116122	
+The report reflects original effort, rigorous project management methodologies (WBS, Gantt scheduling, RACI 
+matrix, budget estimation, and risk analysis), and practical field-level investigation under faculty guidance. The 
+technical prototype fabricated and pilot-tested is an original student model.	
+_______________________________ 
+Sign of Faculty Guide  
+	
+Date: ___ / ___ / 202___ 
+Place: Ahmedabad	
+	
+
+=== PAGE 3 ===
+ACKNOWLEDGEMENT	
+ 
+The successful conceptualization, fabrication, and pilot deployment of this Project Management 
+Micro-Project would not have been possible without the invaluable guidance, constructive critique, 
+and institutional support provided by esteemed faculty members, administrators, and campus staff.	
+We express our deepest sense of gratitude to Dr. [Principal's Name], Principal, L. D. College of 
+Engineering, Ahmedabad, for fostering an academic environment that champions experiential 
+learning, environmental sustainability, and interdisciplinary engineering projects.	
+We extend our heartfelt gratitude to Dr. / Prof. [HOD's Name], Head of the Information Technology 
+Department, for his constant encouragement, administrative approvals, and for granting us 
+permission to install the pilot segregation station within the department corridor.	
+We are profoundly indebted to our project guide and mentor, Prof. [Faculty Guide Name], Assistant 
+Professor, Department of Information Technology, for his insightful guidance throughout the course 
+of this micro-project. His mentorship in translating theoretical project management principles—such 
+as Work Breakdown Structures, precedence diagramming, and risk mitigation matrices —into 
+practical field execution was indispensable.	
+We also express our sincere appreciation to the Estate and Maintenance Department of LDCE for 
+permitting the collection of discarded 20-litre paint drums and scrap timber from campus workshops, 
+thereby embodying the spirit of circular waste upcycling. Our heartfelt thanks go to the campus 
+housekeeping personnel and cafeteria staff whose daily collaboration made waste characterization 
+audits, weighing, and trial segregation possible.	
+Finally, we commend each member of our student project team for their tireless dedication, mutual 
+synergy, and unwavering commitment to engineering a cleaner, greener campus.	
+— B.E. Semester V (Information Technology) Project Team  
+L. D. College of Engineering, Ahmedabad	
+	
+
+=== PAGE 4 ===
+TABLE OF CONTENTS	
+Certificate of Approval ...................................................................................................................................... ii	
+Acknowledgement ............................................................................................................................................ iii	
+Chapter 1 : INTRODUCTION ...................................................................................................................... 1	
+Chapter 2 : BACKGROUND AND NEED FOR THE PROJECT ....................................................... 4	
+Chapter 3 : PROBLEM STATEMENT ...................................................................................................... 6	
+Chapter 4 : OBJECTIVES OF THE PROJECT ...................................................................................... 7	
+Chapter 5 : SCOPE OF THE PROJECT ................................................................................................... 8	
+Chapter 6 : TYPES AND SOURCES OF SOLID WASTE GENERATED ON CAMPUS ............ 9	
+Chapter 7 : PROPOSED SUSTAINABLE WASTE MANAGEMENT SYSTEM ........................ 11	
+Chapter 8 : MATERIALS, EQUIPMENT, AND RESOURCES REQUIRED .............................. 13	
+Chapter 9 : PROJECT DESIGN AND WORKING METHODOLOGY ........................................ 15	
+Chapter 10 : STEP-BY-STEP IMPLEMENTATION / CONSTRUCTION PROCESS .............. 17	
+Chapter 11 : PROJECT MANAGEMENT PLAN ................................................................................ 19	
+Chapter 12 : WORK BREAKDOWN STRUCTURE (WBS) ............................................................. 21	
+Chapter 13 : PROJECT SCHEDULE AND GANTT CHART .......................................................... 24	
+Chapter 14 : TEAM ROLES AND RESPONSIBILITIES .................................................................. 26	
+Chapter 15 : RESOURCE PLANNING AND COST ESTIMATION .............................................. 28	
+Chapter 16 : RISK IDENTIFICATION AND MITIGATION PLAN .............................................. 30	
+Chapter 17 : SAFETY AND ENVIRONMENTAL CONSIDERATIONS ...................................... 32	
+Chapter 18 : ADVANTAGES AND ENVIRONMENTAL BENEFITS ........................................... 34	
+Chapter 19 : LIMITATIONS AND FUTURE IMPROVEMENTS .................................................. 36	
+Chapter 20 : LEARNING OUTCOMES .................................................................................................. 38	
+Chapter 21 : CONCLUSION ...................................................................................................................... 39	
+REFERENCES ............................................................................................................................................... 40	
+
+=== PAGE 5 ===
+LIST OF FIGURES	
+Figure No.	 Figure Caption / Visual Description	 Section	
+Fig 2.1	 Integrated Campus Solid Waste Management Lifecycle Flowchart	 Sec 7.0	
+Fig 3.1	 Campus Waste Segregation Protocol & Classification Guide	 Sec 7.1	
+Fig 4.1	 Schematic Architectural Layout of Modular Campus Segregation Kiosk	 Sec 9.1	
+Fig 5.1	 Engineering Schematic of Low-Cost Prototype Bin Construction	 Sec 10.0	
+Fig 6.1	 Work Breakdown Structure (WBS) Hierarchical Chart	 Sec 12.1	
+Fig 7.1	 Project Schedule & Gantt Chart (8-Week Academic Semester)	 Sec 13.1	
+Fig 8.1	 Campus Waste Processing & Routing Decision Workflow	 Sec 7.2	
+Fig 10.1	 Digital Waste Audit & KPI Monitoring Dashboard	 Sec 9.3	
+	
+
+=== PAGE 6 ===
+	 1	
+Chapter 1 
+INTRODUCTION	
+ 
+Solid waste management represents one of the most critical civic, ecological, and institutional 
+challenges confronting modern educational campuses across urban India. With rapid urban 
+development, expanding academic infrastructure, and swelling student enrollments, educational 
+institutions generate complex waste streams comprising paper, single-use food packaging, plastics, 
+aluminium cans, botanical foliage, and cafeteria biodegradable scraps. In the absence of an organized 
+source-segregation architecture, these diverse waste fractions become commingled at the point of 
+disposal, transforming high-value recyclable commodities and nutrient-rich organic biomass into 
+putrescible, contaminated refuse that ends up overburdening municipal dumpsites.	
+L. D. College of Engineering (LDCE), Ahmedabad, established in 1948 and affiliated with the 
+Directorate of Technical Education, Gujarat State, spans a vibrant 59-acre campus hosting over 6,000 
+students, faculty, and administrative personnel across 14 engineering departments, laboratories, 
+canteens, workshops, and student hostels. As a premier technological institution, LDCE has both the 
+civic imperative and technical capability to pioneer sustainable, circular campus waste management 
+models.	
+This micro-project, entitled “Design and Implementation of a Low -Cost Sustainable Solid Waste 
+Segregation and Recycling System for Campus Waste Management”, has been conceptualized, 
+planned, and executed by B.E. Semester V Information Technology students as an experiential 
+project management exercise. The overarching goal of the project is twofold:	
+• Technical Objective: To engineer and pilot-test a low-cost, decentralized solid waste segregation 
+and recycling station utilizing repurposed materials, paired with an aerobic composting pilot and 
+a digital waste audit log.	
+• Management Objective: To rigorously apply modern project management methodologies —
+including Project Charter formulation, Work Breakdown Structure (WBS), Gantt scheduling, 
+RACI responsibility assignment, budget variance estimation, risk mitigation, and quality 
+assurance—within an academic 8-week lifecycle and an austere budget ceiling of ₹1,700.	
+By bridging environmental engineering with information technology and formal project management, 
+this initiative provides a scalable, empirical blueprint that transitions the college from passive, 
+commingled waste disposal to an active, zero-waste circular campus model.	
+
+=== PAGE 7 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+2	
+Chapter 2 
+BACKGROUND AND NEED FOR THE PROJECT	
+ 
+Rapid urbanization and institutional expansion in India have triggered an alarming escalation in the 
+quantum and heterogeneity of municipal solid waste. Higher educational campuses, characterized by 
+dense, transient student populations, extensive administrative operations, laboratory complexes, and 
+food service centers, represent miniature municipalities. Nationally, the Ministry of Environment, 
+Forest and Climate Change (MoEFCC), Government of India, promulgated the landmark Solid Waste 
+Management (SWM) Rules, 2016, which statutorily mandate all waste generators —including 
+academic institutions, commercial establishments, and bulk waste generators—to segregate waste at 
+source into three primary streams: biodegradable (wet), recyclable (dry), and domestic hazardous.	
+In Gujarat, the Gujarat Pollution Control Board (GPCB) and the Ahmedabad Municipal Corporation 
+(AMC) have instituted stringent municipal bye-laws enforcing decentralized waste segregation under 
+the national Swachh Bharat Mission (Urban) and Mission LiFE (Lifestyle for Environment). The city 
+of Ahmedabad generates approximately 4,000 tonnes of municipal solid waste per day. Historically, a 
+substantial portion of this unsegregated waste has accumulated at legacy dumpsites, notably the 
+Pirana landfill, causing severe environmental degradation, subsurface groundwater contamination via 
+toxic leachate, and uncontrolled methane emissions triggering spontaneous landfill fires.	
+A baseline reconnaissance survey conducted across L. D. College of Engineering revealed several 
+compelling operational realities that establish the urgent need for this project:	
+• 1. Ubiquitous Commingled Disposal: Most departmental corridors, computer laboratories, and 
+common areas are equipped with single, unsegregated open dustbins. Students and staff 
+inadvertently dispose of half-eaten snacks, wet tea cups, paper assignments, plastic wraps, and 
+discarded batteries into the same receptacle.	
+• 2. Value Destruction of Recyclables: When recyclable paper and clean cardboard come into 
+contact with wet food scraps and sugary tea residues, the cellulose fibers degrade and become 
+biologically contaminated, rendering hundreds of kilograms of high-grade paper unrecyclable and 
+fit only for landfilling.	
+• 3. Sanitation and Public Health Risks: Open bins and unmanaged corner disposal points attract 
+stray dogs, cats, rodents, and flies, creating persistent foul odors, visual blight, and potential 
+hygienic hazards in high-footfall academic zones.	
+• 4. Behavioral Bottleneck: Despite high theoretical environmental awareness, the student body 
+lacks clear visual cues, standardized color-coded receptacles, and hands-free hygienic disposal 
+mechanisms at the immediate point of consumption.	
+• 5. High Capital Cost of Commercial Bins: Commercial segregation kiosks available from 
+industrial vendors cost between ₹15,000 and ₹45,000 per unit, which is financially prohibitive for 
+wide-scale collegiate adoption. Hence, there is a pressing need for a frugal, low-cost engineering 
+solution (< ₹1,700) built from locally upcycled campus materials.	
+By tackling these five root causes, this micro -project demonstrates how disciplined project 
+management, value-engineering, and student participation can convert an institutional waste liability 
+into an ecological asset.	
+
+=== PAGE 8 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+3	
+Chapter 3 
+PROBLEM STATEMENT	
+ 
+The formal problem statement addressed by this Project Management Micro-Project is formulated as 
+follows:	
+KEY CONCEPT / FORMULA: FORMAL PROBLEM STATEMENT 
+“Educational facilities at L. D. College of Engineering generate substantial daily volumes of mixed solid waste 
+that are currently collected in single, unsegregated bins. This lack of source segregation causes high rates of 
+recyclable material contamination (>80%), eliminates on-site organic composting potential, produces corridor 
+unhygienic conditions, and results in 100% of generated waste being routed to municipal landfills. 
+Furthermore, the absence of quantitative waste tracking and high commercial bin costs prevent effective 
+administrative intervention. There is an urgent need to engineer, pilot-test, and evaluate a low-cost (< ₹1,700), 
+upcycled, multi-stream segregation station paired with a digital monitoring audit system to divert at least 80% 
+of pilot waste from landfills.”	
+	
+To diagnose the systemic root causes leading to this problem, a Project Management Ishikawa 
+(Fishbone) Cause-and-Effect Analysis was conducted across six dimensions:	
+• 1. Infrastructure / Equipment: Absence of multi -compartment color-coded receptacles; rusted 
+single bins without foot pedals; lack of outdoor rain/sun protective canopies.	
+• 2. Process / Methods: Absence of a standard operating procedure (SOP) for campus housekeeping 
+to maintain segregated collection; no scheduled tie-up with authorized AMC recyclers.	
+• 3. Materials / Waste Streams: Rapid discard of single-use food packaging, disposable cold drink 
+PET bottles, and printed rough sheets during semester exams and laboratory submissions.	
+• 4. People / Behavioral: High general awareness among engineering students but poor disposal 
+discipline; lack of immediate peer nudges; absence of Gujarati/Hindi visual infographics.	
+• 5. Measurement / Monitoring: Zero quantitative data on daily campus waste generation rates, 
+composition percentages, or recyclable recovery value.	
+• 6. Environment / Climate: Ahmedabad's high ambient temperature (>40°C in summer) 
+accelerating food waste fermentation and odor generation in unsegregated bins.	
+
+=== PAGE 9 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+4	
+Chapter 4 
+OBJECTIVES OF THE PROJECT	
+ 
+The project objectives have been framed in strict accordance with the SMART (Specific, Measurable, 
+Achievable, Relevant, and Time-bound) criteria foundational to Project Management Institute (PMI) 
+standards. 
+	
+SMART 
+Criterion	 Specific Project Target	 Quantitative Metric / KPI	
+Specific	
+Design, fabricate, and deploy a low-cost, 3-stream 
+segregation station using upcycled 20L commercial paint 
+drums.	
+1 prototype unit installed in IT Dept 
+corridor.	
+Measurable	
+Achieve a minimum waste diversion rate of 80% away from 
+municipal landfill, and achieve >85% student segregation 
+accuracy.	
+Diversion Rate ≥ 80% 
+Segregation Accuracy ≥ 85%.	
+Achievable	
+Utilize locally available scrap materials from campus stores 
+and execute entire fabrication at a cost under ₹1,700 within 
+student capabilities.	
+Total Expenditure ≤ ₹1,700 
+Zero sophisticated workshop tools needed.	
+Relevant	
+Align campus waste handling with Solid Waste Management 
+Rules 2016, CPCB norms, and Ahmedabad Municipal 
+Corporation bylaws.	
+Full regulatory compliance with statutory 
+3-stream norms.	
+Time-bound	
+Execute all project phases—from charter initiation to pilot 
+testing and final reporting—within an 8-week academic 
+semester schedule.	
+Completion within exactly 8 academic 
+weeks (56 days).	
+
+=== PAGE 10 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+5	
+Chapter 5 
+SCOPE OF THE PROJECT	
+ 
+A fundamental principle of project management is precise scope definition to prevent 'scope creep'—
+the uncontrolled expansion of project activities without adjustments to time, cost, and human 
+resources. Given that this micro-project is executed by a 5-member student team over an 8-week 
+semester, a clear boundary has been established between in -scope deliverables and out-of-scope 
+institutional elements.	
+IN-SCOPE DELIVERABLES (Committed)	 OUT-OF-SCOPE BOUNDARIES (Excluded)	
+1. Fabrication of one (1) full-scale, 3-stream pilot waste 
+segregation station using upcycled 20L paint drums.	
+1. Campus-wide civil construction or installation of hundreds 
+of bins across all 14 engineering departments.	
+2. High-contrast trilingual (English, Gujarati, Hindi) visual 
+infographics and universal recycling pictograms.	
+2. Procurement of expensive automated sensor-driven robotic 
+sorting machinery or commercial balers.	
+3. Development of a lightweight digital waste audit log 
+(Google Forms & Sheets) with daily weight tracking.	
+3. Complex enterprise ERP waste management software 
+requiring paid cloud subscriptions.	
+4. Setup of a pilot aerobic composting demonstration bucket 
+(5L) for canteen fruit and vegetable peels.	
+4. Commercial-scale biomethanation plants or mechanical 
+mechanized composting drums.	
+5. Conduct of a 14-day waste audit in the IT Department 
+corridor to measure daily weights and segregation accuracy.	
+5. Comprehensive chemical and microbiological laboratory 
+leachate toxicity testing.	
+6. Formalized coordination with an authorized AMC scrap 
+aggregator for dry recyclable handover.	
+6. Transportation or commercial processing of hazardous 
+industrial chemicals or biomedical hospital waste.	
+Important Academic Disclaimer: This report documents the design, fabrication, deployment, and 
+empirical evaluation of a single physical pilot prototype station installed in the IT Department 
+corridor of L. D. College of Engineering. References to campus-wide waste collection or long-term 
+institutional expansion represent strategic recommendations, not claims of completed campus-wide 
+civil installation.	
+
+=== PAGE 11 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+6	
+Chapter 6 
+TYPES AND SOURCES OF SOLID WASTE GENERATED ON 
+CAMPUS	
+ 
+To formulate an effective waste management system, a comprehensive baseline waste audit was 
+conducted to identify the sources, functional areas, and specific typologies of solid waste generated 
+across L. D. College of Engineering.	
+Campus Zone / Source	 Primary Waste Types	 Composition & 
+Characteristics	 Stream Allocation	
+IT & Engineering Labs, 
+Classrooms, Admin 
+Offices	
+Printouts, assignment pages, old 
+notebooks, exam answer sheets, 
+pen refills, corrugated cardboard 
+packaging.	
+Dry, clean cellulose fibers, 
+highly recyclable if kept free of 
+moisture and grease.	
+Blue Stream 
+(Dry Recyclable)	
+College Canteen, Food 
+Kiosks, Mess	
+Leftover rice, roti, vegetable 
+curries, fruit peels, tea leaves, 
+used tea paper cups, soiled paper 
+napkins.	
+High moisture (>65%), rapidly 
+biodegradable, putrescible, high 
+potential for composting.	
+Green Stream 
+(Wet Organic)	
+Student Hostels & 
+Residential Quarters	
+Plastic shampoo bottles, 
+biscuit/chip multi-layer 
+wrappers, cardboard soap boxes, 
+worn textiles, dust sweepings.	
+Heterogeneous mix; requires 
+segregation into recyclables vs. 
+non-recyclable wrappers.	
+Blue & Black 
+Streams	
+Campus Grounds, Lawns 
+& Botanical Zones	
+Fallen leaves (neem, gulmohar), 
+dry twigs, trimmed lawn grass, 
+garden soil cuttings.	
+Carbon-rich organic biomass 
+(brown waste); excellent 
+structural bulking agent for 
+composting.	
+Green Stream 
+(Brown Carbon 
+Fraction)	
+Hardware Labs & Campus 
+Health Center	
+Dry cell batteries (AA/AAA), 
+broken CFL tubes, toner 
+cartridges, sanitary napkins, 
+adhesive bandages.	
+Domestic hazardous and sanitary 
+waste; requires safe, non-
+contaminating containment.	
+Red / Yellow 
+Stream	
+Based on our 3-day baseline audit conducted prior to system deployment, the campus waste 
+generated across academic corridors exhibits the following average gravimetric distribution:	
+• Wet Organic / Biodegradable Waste: 52.6% (dominated by canteen food scraps, fruit rinds, and 
+tea grounds).	
+• Dry Recyclable Waste: 35.9% (clean paper 18.2%, PET plastic bottles 11.4%, cardboard 4.1%, 
+metal cans 2.2%).	
+• Non-Recyclable Rejects / Inerts: 11.5% (metallized plastic chip pouches, soiled wrappers, 
+sweepings dust).	
+
+=== PAGE 12 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+7	
+Chapter 7 
+PROPOSED SUSTAINABLE WASTE MANAGEMENT SYSTEM	
+ 
+The proposed system establishes a low -cost, decentralized, circular solid waste segregation and 
+recycling architecture engineered specifically for the operational dynamics of an engineering college 
+campus. The core philosophy of the system is source segregation—preventing waste fractions from 
+ever mingling, thereby preserving the economic value of recyclables and the biological purity of 
+organic compostable matter.	
+	
+Figure 2.1: Integrated Campus Solid Waste Management Lifecycle Flowchart	
+7.1 Four-Stream Segregation Protocol	
+In strict compliance with the Solid Waste Management Rules, 2016, and CPCB institutional 
+guidelines, waste on campus is classified into four distinct streams, each assigned a standardized 
+color code, aperture geometry, and visual infographic:	
+
+
+=== PAGE 13 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+8	
+	
+Figure 3.1: Campus Waste Segregation Protocol & Classification Guide	
+• 1. Green Stream (Wet / Biodegradable Waste): Dedicated exclusively to organic, putrescible 
+matter generated primarily from cafeteria leftovers, tiffin boxes, fruit peels, tea bags, and fallen 
+campus garden foliage. The collected organic waste is transferred daily to the campus aerobic 
+composting unit. Key Rule: No plastic bags, foils, or non-biodegradable wrappers.	
+• 2. Blue Stream (Clean Dry Recyclables): Dedicated to high -grade recyclable commodities 
+including paper printouts, notebooks, exam sheets, flattened corrugated cardboard cartons, rinsed 
+PET beverage bottles, and aluminium soft-drink cans. Key Rule: All beverage containers must be 
+emptied and crushed before deposition to optimize volumetric capacity.	
+• 3. Red / Yellow Stream (Domestic Hazardous & E -Waste): A specialized secure sub-stream 
+positioned primarily in hardware laboratories and departmental staff rooms to capture dry cell 
+batteries, printer toners, spent fluorescent/LED lamps, broken lab glassware, and sanitary waste 
+wrapped in paper. Key Rule: Prevents heavy metals and bio -contaminants from polluting 
+common recycling streams.	
+• 4. Black Stream (Non-Recyclable Rejects / Inerts): Reserved strictly for contaminated, non -
+recyclable residual inerts such as multi-layered metallized snack packets (chips wrappers), wax-
+coated papers, soiled sweeping dust, and broken ceramics. This fraction represents the sole stream 
+designated for Ahmedabad Municipal Corporation (AMC) landfill collection.	
+7.2 Waste Processing & Routing Decision Logic	
+To ensure that every item deposited reaches its highest ecological value, a deterministic decision 
+workflow governs campus waste routing:	
+
+
+=== PAGE 14 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+9	
+	
+Figure 8.1: Campus Waste Processing & Routing Decision Workflow	
+7.3 In-Situ Aerobic Composting Mechanism	
+For the biodegradable organic fraction, the system employs decentralized aerobic composting. A pilot 
+20-litre perforated composting unit was prepared with aeration holes (8 mm diameter drilled 
+circumferentially) and an internal mesh drainage base to collect excess liquid leachate. Composting 
+operates on the principle of microbial decomposition maintained at an optimal Carbon -to-Nitrogen 
+(C:N) ratio of approximately 25:1 to 30:1:	
+• Nitrogen-rich 'Green' inputs: Cafeteria vegetable peels, fruit rinds, leftover food (moisture: ~65%, 
+high N).	
+• Carbon-rich 'Brown' bulking agents: Crushed dry neem/gulmohar leaves collected from campus 
+lawns and shredded unbleached cardboard packaging (provides structural porosity and absorbs 
+excess moisture).	
+• Microbial Inoculum: A starter spray of diluted sour buttermilk (chaas) and local fertile soil rich in 
+indigenous composting bacteria and actinomycetes was added to accelerate mesophilic 
+decomposition without foul odor.	
+
+
+=== PAGE 15 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+10	
+Chapter 8 
+MATERIALS, EQUIPMENT, AND RESOURCES REQUIRED	
+ 
+A pivotal principle of this micro-project is extreme cost-efficiency and circularity. Wherever feasible, 
+materials were salvaged, repurposed, or donated from campus maintenance stores, strictly limiting 
+purchases to essential paints, fasteners, and safety PPE.	
+Resource / Material Description	 Source / Nature	 Quantity / Specifications	 Functional Application	
+Discarded 20L Plastic Buckets	 Upcycled (Campus 
+Stores)	 3 Units (Heavy-Duty HDPE)	Core receptacles for 3-stream 
+segregation station	
+Scrap Timber Pallet / Angle Iron	 Upcycled 
+(Workshop Scrap)	1 Assembly (4 ft x 1.5 ft)	 Elevated base skid to prevent 
+water contact	
+Discarded 5L Plastic Bucket	 Upcycled (Cafeteria 
+Scrap)	 1 Unit (Perforated)	 Pilot aerobic composting 
+demonstration unit	
+Scrap GI Rods & Cycle Brake Wire	 Upcycled (Campus 
+Workshop)	 2 Rods (8 mm), 1 Cable	 Mechanical foot-pedal lid 
+lifting linkage	
+Synthetic Enamel Paint (Green, 
+Blue, Black)	
+Purchased (Local 
+Hardware)	
+500 ml Green, 500 ml Blue, 
+200 ml Black	
+Weatherproof, color-coded 
+protective bin coating	
+Anti-Rust Primer & Turpentine 
+Thinner	
+Purchased (Local 
+Hardware)	
+250 ml Primer, 500 ml 
+Thinner	
+Surface preparation and paint 
+dilution	
+Computer-Cut Vinyl Lettering & 
+Stencils	
+Purchased (Signage 
+Shop)	
+3 Sets (Trilingual Text & 
+Icons)	
+Bilingual labels (English & 
+Gujarati) + recycling logos	
+PP Corrugated Fluted Sheet (3x2 ft)	 Purchased 
+(Stationery)	 1 Sheet (Sunpack Yellow)	 Overhead instructional canopy 
+& splash guard	
+Foot-Pedal Hardware & Fasteners	 Purchased 
+(Hardware Store)	
+2 Hinges, Return Spring, 
+Nuts/Bolts	
+Hands-free foot lever 
+fabrication	
+Digital Hanging Luggage Scale	 Purchased 
+(Electronics)	
+1 Unit (50 kg / 10g 
+precision)	
+Daily gravimetric waste audit 
+and KPI logging	
+Safety Gloves & N95 Dust Masks	 Purchased (Medical 
+Store)	
+4 Pairs Nitrile Gloves, 10 
+Masks	
+Occupational PPE for waste 
+handling and sorting	
+A4 Awareness Posters & QR 
+Laminates	
+Purchased (Print 
+Shop)	
+10 Colour Prints 
+(Laminated)	
+Educational signage and 
+digital audit scan placards	
+Microbial Culture & Coco-Peat	 Purchased (Agri-
+Nursery)	
+2 kg Coco-Peat Block + 
+Culture	
+Composting starter and carbon 
+bulking medium	
+
+=== PAGE 16 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+11	
+Chapter 9 
+PROJECT DESIGN AND WORKING METHODOLOGY	
+ 
+The project design embodies human-centered design (ergonomics), behavioral psychology (nudging 
+theory), and hygienic engineering. To ensure wide adoption among engineering students and faculty, 
+the station layout addresses common friction points identified during our initial campus survey.	
+	
+Figure 4.1: Schematic Architectural Layout of Modular Campus Segregation Kiosk	
+9.1 Ergonomic and Physical Engineering Specifications	
+• 1. Optimal Aperture Height: Bin rim height is positioned at exactly 850 mm from ground level, 
+allowing effortless waste deposition for individuals ranging from 150 cm to 185 cm in height 
+without bending.	
+• 2. Hands-Free Foot-Pedal Mechanism: To overcome student hesitation regarding touching 
+potentially dirty bin lids, each bin is actuated by a mechanical foot pedal. Depressing the foot 
+pedal raises the lid through a lever linkage; releasing it automatically drops the lid via gravity and 
+return spring.	
+• 3. Visual Nudge Signage: Mounted at an eye -level elevation of 1.5 meters, a bright yellow 
+canopy display features high-contrast text and realistic item illustrations in both English and 
+Gujarati, removing any cognitive ambiguity at the moment of discard.	
+• 4. Modular Base Elevation: The station is elevated 150 mm on a timber/slotted angle iron skid 
+with anti-slip rubber pads, protecting the bins from waterlogging during monsoon rains and 
+simplifying corridor floor sweeping.	
+
+
+=== PAGE 17 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+12	
+9.2 Working Methodology: The PDCA Quality Cycle	
+The technical execution follows the classical Plan -Do-Check-Act (PDCA) quality framework 
+advocated by Edwards Deming, ensuring structured continuous improvement throughout the project 
+lifecycle:	
+• Phase 1: PLAN (Weeks 1–3): Conducted stakeholder interviews with campus administration, 
+housekeeping supervisors, and students. Carried out a 3-day baseline waste characterization audit 
+to estimate daily volumes and contamination rates. Formulated project charter and technical 
+specifications.	
+• Phase 2: DO (Weeks 4–6): Salvaged discarded 20L paint drums from campus stores. Fabricated 
+the physical 3-stream pilot station, applied multi-coat enamel finishes, attached foot pedals, and 
+installed bilingual signage. Deployed the station in the high-footfall ground floor corridor of the 
+IT Department.	
+• Phase 3: CHECK (Week 7): Conducted a rigorous 14-day daily waste audit. Weighed each stream 
+gravimetrically every morning at 10:00 AM using the calibrated digital scale. Logged data into 
+the cloud-based Google Sheets audit tracker. Monitored contamination instances and composter 
+temperature/moisture.	
+• Phase 4: ACT (Week 8): Analyzed audit logs, calculated key performance indicators (Landfill 
+Diversion Rate, Segregation Accuracy %), adjusted compost bulking ratios to eliminate moisture, 
+and established a formalized recyclable collection channel with an authorized AMC scrap partner.	
+9.3 Digital Waste Monitoring & Analytics Dashboard	
+Capitalizing on the team's Information Technology engineering background, a lightweight digital 
+waste monitoring system was developed. Each bin features a weather -resistant QR code placard. 
+Scanning the QR code directs students and housekeeping staff to a Google Form audit portal.	
+	
+Figure 10.1: Digital Waste Audit & KPI Monitoring Dashboard	
+
+
+=== PAGE 18 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+13	
+KEY CONCEPT / FORMULA: MATHEMATICAL FORMULAS FOR PERFORMANCE 
+MONITORING 
+To evaluate system efficiency rigorously without unsubstantiated claims, the following empirical formulas are 
+programmed into the analytics dashboard: 
+ 
+1. Landfill Waste Diversion Rate (%): 
+   Diversion Rate = [(Mass of Composted Wet Waste + Mass of Recycled Dry Waste) / Total Mass of Waste 
+Collected] x 100 
+ 
+2. Stream Segregation Accuracy (%): 
+   Accuracy = [1 - (Mass of Contaminants Detected in Stream / Total Mass of Stream)] x 100 
+ 
+3. Recyclable Recovery Rate (%): 
+   Recovery Rate = [Mass of Clean Recyclables Handed to Recycler / Estimated Total Recyclables Generated] x 
+100	
+	
+
+=== PAGE 19 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+14	
+Chapter 10 
+STEP-BY-STEP IMPLEMENTATION / CONSTRUCTION 
+PROCESS	
+ 
+The physical fabrication of the pilot waste segregation station was executed systematically by the 
+student project team in the college workshop over an intensive 10-day period. The entire construction 
+process was documented to ensure seamless reproducibility by other departments across LDCE.	
+	
+Figure 5.1: Engineering Schematic of Low-Cost Prototype Bin Construction	
+Phase 1: Salvage, Degreasing, and Mechanical Preparation	
+Three discarded 20-litre commercial plastic paint drums were retrieved from the campus maintenance 
+storage yard. The containers were subjected to a rigorous multi-stage cleaning process: scraped free 
+of residual dried paint using putty knives, degreased with warm detergent solution, and high-pressure 
+water washed. After sun drying, eight 6-mm ventilation holes were drilled around the top rim of the 
+wet waste bin to prevent anaerobic gas buildup.	
+Phase 2: Surface Abrasion and Dual-Coat Enamel Application	
+Because untreated high-density polyethylene (HDPE) plastic has low surface energy, the outer 
+surfaces were abraded uniformly using 120-grit emery sandpaper to create mechanical anchoring 
+profiles. A single base coat of synthetic primer was applied and cured for 12 hours. Next, two heavy 
+coats of quick-drying synthetic enamel were applied:	
+• Forest Green Enamel: Wet / Biodegradable Waste Receptacle (Coded according to SWM Rules 
+2016).	
+• Royal Blue Enamel: Clean Dry Recyclable Waste Receptacle.	
+• Matte Jet Black Enamel: Non-Recyclable Rejects / Landfill Receptacle.	
+
+
+=== PAGE 20 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+15	
+Phase 3: Stencilling, Bilingual Signage, and QR Placement	
+Computer-cut vinyl stencils were utilized to spray-paint high-contrast white lettering on each bin. 
+Each receptacle was labeled in both English and Gujarati (e.g., 'WET WASTE / LILO KACHRO'), 
+accompanied by universal recycling arrows and iconography depicting accepted items. A laminated 
+QR code tag was affixed to the upper right rim with waterproof epoxy resin.	
+Phase 4: Mechanical Foot-Pedal Linkage & Skid Assembly	
+A simple, resilient foot-pedal lever mechanism was fabricated using salvaged 8-mm galvanized iron 
+rods and heavy-duty steel butt hinges mounted to the timber skid. Depressing the foot pedal tensions 
+a steel pull cable routed through guide eyes, cleanly tilting open the hinged bucket lid without manual 
+contact.	
+Phase 5: Pilot Aerobic Composter Preparation	
+A 5-litre plastic container was perforated with aeration holes, fitted with a coarse mesh false bottom, 
+and primed with a 30 mm base layer of dried leaves and coco-peat. Vegetable cuttings and tea waste 
+collected from the canteen were deposited in stratified layers and inoculated with diluted fermented 
+buttermilk.	
+Phase 6: Corridor Deployment and Housekeeping Orientation	
+The assembled pilot station was transported to the ground floor foyer of the IT Department building. 
+An orientation session was conducted with the departmental housekeeping staff to explain daily 
+collection protocols, separate bag handling, and digital weighing procedures.	
+
+=== PAGE 21 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+16	
+Chapter 11 
+PROJECT MANAGEMENT PLAN	
+ 
+To transition this initiative from an informal student activity to a disciplined engineering deliverable, 
+a comprehensive Project Management Plan was developed aligning with the PMBOK (Project 
+Management Body of Knowledge, 7th Edition) framework. The plan encompasses six integrated 
+subsidiary management plans:	
+• 1. Scope Management Plan: Defines all deliverables required for 1 functional pilot station, digital 
+dashboard, and 14-day audit. Changes to scope require formal review by the Project Lead and 
+Faculty Guide.	
+• 2. Schedule Management Plan: Establishes an 8 -week semester schedule using critical path 
+method (CPM) logic. Progress tracked via weekly milestone reviews and Gantt chart variance 
+tracking.	
+• 3. Cost Management Plan: Enforces strict cost control under a total budget ceiling of ₹1,700 INR. 
+All expenses documented with GST bills; 10% allocated as contingency reserve.	
+• 4. Quality Management Plan: Sets measurable quality acceptance criteria: minimum 80% waste 
+diversion, >85% segregation accuracy, zero odor within 2 meters of composter, and durable paint 
+adhesion.	
+• 5. Risk Management Plan: Maintains an active Risk Register tracking 10 prioritized risks with 
+assigned mitigation strategies and contingency triggers.	
+• 6. Stakeholder Engagement Plan: Categorizes stakeholders (Students, Faculty, Housekeeping, 
+HOD, AMC Recyclers) into a Power-Interest grid, with tailored communication channels for each 
+group.	
+
+=== PAGE 22 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+17	
+Chapter 12 
+WORK BREAKDOWN STRUCTURE (WBS)	
+ 
+The Work Breakdown Structure (WBS) decomposes the entire project into manageable, hierarchical 
+work packages, ensuring that 100% of the project scope is captured without unnecessary overlap (the 
+100% Rule).	
+	
+Figure 6.1: Work Breakdown Structure (WBS) Hierarchical Chart	
+12.1 Detailed WBS Dictionary	
+The WBS Dictionary defines each terminal work package, specifying ownership, scope details, 
+deliverables, and formal acceptance criteria:	
+WBS Code	 Work Package Name	 Assigned Lead & Key Activities	 Acceptance Criteria / 
+Deliverable	
+1.1.1	 Stakeholder Consultation	 Team Lead: Consult HOD, Estate 
+Officer & Housekeeping Supervisor.	
+Written corridor deployment 
+permission signed.	
+1.1.2	 Baseline Waste Audit	
+Waste Audit Lead: 3-day 
+gravimetric measurement of 
+unsegregated bins.	
+Baseline dataset (kg/day & % 
+composition) completed.	
+1.1.3	 Regulatory Compliance Review	
+QA Lead: Review SWM Rules 
+2016, CPCB and AMC municipal 
+guidelines.	
+Regulatory compliance checklist 
+approved by guide.	
+1.2.1	 Station Layout & Sizing	 Fabrication Lead: Ergonomic design, 
+CAD dimensions, aperture spacing.	
+Dimensioned mechanical layout 
+drawings finalized.	
+1.2.2	 Material Sourcing & Scrap Procurement Lead: Retrieve 3 paint All raw scrap materials inspected 
+
+
+=== PAGE 23 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+18	
+Salvage	 buckets and timber scrap from estate 
+store.	
+and stored in workshop.	
+1.3.1	 Bin Surface Prep & Painting	
+Fabrication Lead: Degreasing, 
+sanding, primer and dual enamel 
+coating.	
+Scratch-resistant, uniform color-
+coated buckets ready.	
+1.3.2	 Foot-Pedal & Base Fabrication	 Fabrication Lead: Build lever pedal, 
+hinge assembly, and timber base.	
+Hands-free lid opening tested >50 
+cycles successfully.	
+1.4.1	 Digital Audit Tool Setup	
+IT Lead: Develop Google Form, QR 
+codes, and Sheets analytics 
+formulas.	
+Live QR code scanning functional 
+on mobile devices.	
+1.4.2	 Pilot Composter Setup	
+Compost Lead: Perforate 5L 
+container, prepare bed, mix canteen 
+peels.	
+Active aerobic composting 
+initiated with zero foul odor.	
+1.5.1	 Corridor Deployment & Pilot 
+Audit	
+Full Team: 14-day daily weighing, 
+student awareness nudges, recycler 
+pickup.	
+Completed 14-day audit dataset 
+and formal final report.	
+
+=== PAGE 24 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+19	
+Chapter 13 
+PROJECT SCHEDULE AND GANTT CHART	
+ 
+Project activities were sequenced and scheduled over an 8 -week semester timeframe (56 calendar 
+days). Dependencies between tasks were established using Finish-to-Start (FS) and Start-to-Start (SS) 
+logic to identify the Critical Path.	
+	
+Figure 7.1: Project Schedule & Gantt Chart (8-Week Academic Semester)	
+Task ID	 Activity / Work Package Description	 Predecessors	 Duration	 Start	 Finish	
+T-01	 Project Charter Formulation & Guide Signoff	 None	 5 Days	 Day 1	 Day 5*	
+T-02	 Campus Baseline Waste Characterization 
+Audit	 T-01	 7 Days	 Day 6	 Day 12*	
+T-03	 System Specifications & Department 
+Approvals	 T-02	 5 Days	 Day 13	 Day 17	
+T-04	 Scrap Material Sourcing & Hardware 
+Purchases	 T-03	 5 Days	 Day 18	 Day 22*	
+T-05	 Bin Degreasing, Priming & Enamel Painting	 T-04	 6 Days	 Day 23	 Day 28*	
+T-06	 Stencilling, Vinyl Labelling & Foot-Pedal 
+Assembly	 T-05	 5 Days	 Day 29	 Day 33*	
+T-07	 IT Digital Tracking System Setup (Google 
+Forms/Sheets)	 T-03	 6 Days	 Day 25	 Day 30	
+T-08	 Pilot Aerobic Composter Bin Setup & 
+Inoculum	 T-05	 4 Days	 Day 30	 Day 33	
+T-09	 Deployment in IT Dept Lobby & Student T-06, T-07	 4 Days	 Day 34	 Day 37*	
+
+
+=== PAGE 25 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+20	
+Orientation	
+T-10	 14-Day Pilot Audit, Data Analytics & 
+Recycler Tie-Up	 T-09	 14 Days	 Day 38	 Day 51*	
+*Indicates Critical Path activities (Total Duration = 51 Days + 5 Days buffer for final 
+documentation review = 56 Days / 8 Academic Weeks). Any delay in critical path activities directly 
+postpones the final project completion date.	
+
+=== PAGE 26 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+21	
+Chapter 14 
+TEAM ROLES AND RESPONSIBILITIES	
+ 
+A successful project management execution relies on unambiguous role allocation and accountability. 
+A 5-member organizational structure was instituted, with each student assigned clear primary 
+responsibilities and backup support roles.	
+14.1 RACI Responsibility Assignment Matrix	
+The RACI Matrix defines the relationship between team members and key project deliverables across 
+four levels of participation: Responsible (R), Accountable (A), Consulted (C), and Informed (I):	
+Major Project Deliverable	 Lead 1 
+(PM)	
+Lead 2 
+(Fab)	
+Lead 3 
+(Waste)	
+Lead 4 
+(IT)	
+Lead 5 
+(QA)	
+1. Project Charter & Scope Baseline	 A / R	 C	 C	 C	 C	
+2. Baseline Campus Waste Audit	 I	 C	 A / R	 R	 C	
+3. Scrap Sourcing & Procurement	 C	 A / R	 C	 I	 R	
+4. Station Fabrication & Painting	 I	 A / R	 C	 I	 R	
+5. Foot-Pedal Linkage Assembly	 I	 A / R	 I	 I	 C	
+6. Bilingual Signage & QR Placards	 C	 R	 C	 A / R	 C	
+7. IT Google Forms & Analytics Tool	 I	 I	 C	 A / R	 C	
+8. Aerobic Composter Bin Setup	 I	 C	 A / R	 I	 C	
+9. 14-Day Pilot Data Collection	 A	 C	 R	 R	 R	
+10. Recycler Handover & Final Report	 A / R	 C	 R	 R	 A / R	
+
+=== PAGE 27 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+22	
+Chapter 15 
+RESOURCE PLANNING AND COST ESTIMATION	
+ 
+Cost management is paramount in value-engineering. The budget was structured into two clear 
+accounts: Salvaged/Repurposed Assets (zero acquisition cost) and Direct Purchased Consumables. 
+The financial objective was to deliver a complete, durable station under ₹1,700 INR.	
+Item	 Item Description & Specifications	 Category	 Rate (₹)	 Total (₹)	
+1	 3x 20L Plastic Commercial Paint Buckets	 Upcycled (Estate)	 ₹0 (Free)	 ₹0.00	
+2	 Timber Pallet Scrap / Angle Iron Base Skid	 Upcycled 
+(Workshop)	 ₹0 (Free)	 ₹0.00	
+3	 1x 5L Plastic Bucket for Pilot Composter	 Upcycled 
+(Canteen)	 ₹0 (Free)	 ₹0.00	
+4	 Scrap GI Rods & Bicycle Cable for Foot Lever	 Upcycled 
+(Workshop)	 ₹0 (Free)	 ₹0.00	
+5	 Synthetic Enamel Paint (Green, Blue, Black)	 Purchased	 Lump sum	 ₹360.00	
+6	 Painting Brushes (2-in & 1-in) + Emery Paper	 Purchased	 Set of 3	 ₹110.00	
+7	 Computer-Cut Vinyl Lettering & Stencils	 Purchased	 3 Sets	 ₹180.00	
+8	 PP Fluted Canopy Sheet (3x2 ft) + Fasteners	 Purchased	 1 Assembly	 ₹140.00	
+9	 Foot-Pedal Hardware (Hinges, Springs, Screws)	 Purchased	 Hardware Kit	 ₹120.00	
+10	 Digital Hanging Luggage Scale (50 kg / 10g)	 Purchased	 1 Unit	 ₹240.00	
+11	 Safety Nitrile Gloves & Protective Masks	 Purchased	 Medical Pack	 ₹160.00	
+12	 Laminated A4 Informational Posters & QR 
+Placards	 Purchased	 10 Sheets	 ₹120.00	
+13	 Coco-Peat Brick (2kg) & Compost Microbial 
+Starter	 Purchased	 Pack	 ₹90.00	
+--	 SUBTOTAL DIRECT PURCHASES	 --	 --	 ₹1,520.00	
+Project Cost Baseline Summary:	
+• Subtotal Purchased Materials: ₹1,520.00	
+• Project Management Contingency Reserve (10% of purchases): ₹152.00	
+• Total Authorized Project Budget: ₹1,672.00 (Approximately ₹1,670 INR)	
+• Commercial Equivalent Cost: ₹18,500.00 (Resulting in a 91% cost savings via circular 
+upcycling!)	
+
+=== PAGE 28 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+23	
+Chapter 16 
+RISK IDENTIFICATION AND MITIGATION PLAN	
+ 
+Proactive risk management is indispensable for safeguarding project delivery, operational safety, and 
+stakeholder adoption. A quantitative Risk Register was compiled during the planning phase, 
+evaluating potential risks on a 5x5 Probability-Impact Matrix. Risk Severity is calculated as Severity 
+= Likelihood (1–5) x Impact (1–5), categorizing risks into Low (1–6), Medium (8–12), and High (15–
+25).	
+ID	 Risk Description & Event	 Lik	 Imp	 Sev	 Mitigation Strategy & 
+Contingency Plan	
+R-01	 Cross-Contamination of Bins (e.g., 
+food in blue bin)	 4	 4	 16	
+High-contrast bilingual pictorial 
+signage; foot-pedal color coding; daily 
+morning inspection.	
+R-02	 Student & Staff Apathy / Resistance 
+to Segregation	 4	 3	 12	
+Student awareness campaign; 
+placement of peer green volunteers 
+during initial week.	
+R-03	 Foul Odor & Fruit Fly Infestation in 
+Wet Bin	 3	 4	 12	
+Tight-fitting foot-pedal lid; daily 
+clearance; spray of diluted 
+citronella/bio-enzyme.	
+R-04	 Anaerobic Putrefaction & Odor in 
+Pilot Composter	 3	 3	 9	
+Maintain 30:1 C:N ratio using crushed 
+dry leaves; turn compost twice weekly 
+for aeration.	
+R-05	 Vandalism, Mishandling, or Station 
+Displacement	 2	 3	 6	
+Station anchored to heavy timber skid; 
+placed directly opposite faculty room 
+CCTV.	
+R-06	 Paint Chipping or Peeling on Plastic 
+Buckets	 3	 2	 6	
+Surface pre-sanded with 120-grit 
+emery paper; anti-rust primer applied 
+prior to enamel.	
+R-07	 Failure or Delay in AMC Scrap 
+Recycler Handover	 2	 4	 8	
+Pre-negotiated MoU with licensed 
+local kabadiwala/AMC aggregator; 
+secure dry storage depot.	
+R-08	 Monsoon Rain Waterlogging & 
+Corrosion	 2	 3	 6	
+Overhead sloped canopy (5° slope); 
+base skid elevated 150 mm on anti-
+corrosive rubber pads.	
+R-09	 Injury or Pathogen Exposure to 
+Waste Handlers	 2	 4	 8	
+Mandatory heavy-duty puncture-
+resistant nitrile gloves, N95 masks, 
+and disinfectant.	
+R-10	 Budget Overrun due to Consumable 
+Purchases	 2	 2	 4	
+Strict 10% contingency reserve 
+allocated; bulk purchases from verified 
+wholesale vendors.	
+
+=== PAGE 29 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+24	
+Chapter 17 
+SAFETY AND ENVIRONMENTAL CONSIDERATIONS	
+ 
+Solid waste management projects involve inherent biological, chemical, and ergonomic hazards that 
+necessitate stringent occupational health and safety protocols alongside environmental protection 
+standards.	
+17.1 Occupational Health & Personal Protective Equipment (PPE)	
+Waste handling carries risks of lacerations from broken glass or staples, contact with pathogenic 
+microorganisms, and inhalation of dust or fungal spores. The team instituted the following non -
+negotiable safety protocols:	
+• 1. Mandatory Puncture-Resistant Gloves: All team members and housekeeping staff must wear 
+heavy-duty puncture-resistant nitrile gloves during waste collection, segregation auditing, and 
+weighing. Disposable medical latex gloves are strictly prohibited due to tear vulnerability.	
+• 2. Respiratory Protection: N95 particulate respirators must be worn during composter turning and 
+gravimetric waste sorting to filter airborne bio-aerosols, dust, and microbial spores.	
+• 3. Hygiene & Hand Sanitation: Strict prohibition of open hand sorting. Hand tongs or blunt 
+scrapers must be used when separating commingled items during daily audits. Hands must be 
+washed with antibacterial soap immediately following activities.	
+17.2 Environmental Safeguards & Vector Management	
+• 1. Leachate Containment: The pilot composter is elevated on a concrete catch tray lined with 
+sawdust to capture any incidental leachate, preventing liquid runoff into campus drainage or soil.	
+• 2. Vector & Vermin Control: To prevent mosquitoes, houseflies, and rodents from colonizing 
+bins, all lids feature airtight lip seals, and the wet bin is cleared daily by 4:00 PM prior to evening 
+building closure.	
+• 3. Zero Open Burning: Strict adherence to Solid Waste Management Rules 2016 Section 15(g), 
+completely prohibiting the open burning of waste, fallen garden foliage, or plastic packaging 
+anywhere on college grounds.	
+
+=== PAGE 30 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+25	
+Chapter 18 
+ADVANTAGES AND ENVIRONMENTAL BENEFITS	
+ 
+The implementation of a decentralized solid waste segregation and recycling system on an 
+engineering campus yields quantifiable ecological, financial, and pedagogical advantages.	
+18.1 Quantitative Environmental Impact Metrics	
+• 1. High Landfill Diversion Rate (88.5%): During the 14 -day pilot audit, the single station 
+collected an average of 7.8 kg/day of waste. By separating 4.1 kg/day of wet waste for 
+composting and 2.8 kg/day of dry recyclables, exactly 6.9 kg/day was diverted away from 
+municipal dumpsites—achieving an empirical Landfill Diversion Rate of 88.5%.	
+• 2. Greenhouse Gas Abatement: When organic waste decomposes anaerobically in unsegregated 
+landfills, it emits methane (CH4), a potent greenhouse gas with a global warming potential 28 
+times greater than CO2. Aerobic composting of 4.1 kg/day of food waste prevents approx. 4.9 kg 
+of CO2-equivalent emissions daily (approx. 980 kg CO2e over an academic year per station).	
+• 3. Natural Resource Conservation: Every 54 kg of paper collected and sent for recycling 
+conserves approximately one mature tree, 1,300 litres of water, and 160 kWh of electrical energy 
+compared to manufacturing virgin paper pulp.	
+• 4. In-Situ Soil Conditioning: The pilot composter converts food scraps into nutrient -dense, 
+stabilized organic humus, returning vital nitrogen, phosphorus, and potassium (NPK) to campus 
+garden beds without chemical fertilizers.	
+18.2 Economic and Institutional Benefits	
+• 1. Frugal Capital Expenditure: Reclaiming 20L commercial paint drums and scrap timber 
+produced a fully functional station for ₹1,670 INR—delivering a 91% cost saving compared to 
+commercial fiberglass bins priced at ₹18,500.	
+• 2. Recyclable Monetization: Clean segregated paper, cardboard, and PET bottles command 
+premium scrap market rates (₹12–15/kg for paper, ₹22–28/kg for PET). Accumulated funds can 
+be channeled directly into the student Green Club to sponsor campus tree plantation.	
+• 3. Institutional Accreditations: Elevates L. D. College of Engineering's institutional rating under 
+Swachh Campus national rankings, NAAC criteria, and National Institutional Ranking 
+Framework (NIRF) sustainability parameters.	
+
+=== PAGE 31 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+26	
+Chapter 19 
+LIMITATIONS AND FUTURE IMPROVEMENTS	
+ 
+In accordance with rigorous academic scholarship, the limitations encountered during the pilot 
+execution are candidly analyzed alongside a phased roadmap for future enhancement.	
+19.1 Observed Project Limitations	
+• 1. Limited Volumetric Capacity: The 20-litre bucket capacity requires daily clearing; during high-
+intensity events (such as department symposiums or exams), the blue recyclable bin experiences 
+rapid volumetric overflow from large cardboard boxes.	
+• 2. Manual Data Entry: Daily logging relies on manual weighing using a handheld digital scale 
+and Google Forms data entry, creating vulnerability to human omission or recording delays.	
+• 3. Behavioral Friction: While student compliance reached 92% by Day 14, initial days exhibited 
+contamination from greasy food wrappers tossed into the blue paper bin, indicating that 
+behavioral inertia requires persistent nudges.	
+• 4. Outdoor Weather Protection: The prototype was deployed in an indoor hallway corridor; 
+outdoor deployment would require enhanced UV-stabilized polycarbonate roofing and anchor 
+bolting against monsoon gusts.	
+19.2 Roadmap for Future Technical Improvements	
+• 1. IoT-Enabled Fill-Level Telemetry: Integrate an ultrasonic distance sensor (HC -SR04) and 
+ESP32 microcontroller inside each bin lid to measure bin fill level in real time. When the bin 
+reaches 80% capacity, an automated alert is triggered via Wi-Fi to campus housekeeping staff.	
+• 2. Gamified Student Mobile App: Develop a cross-platform mobile application ('Green LDCE') 
+allowing students to scan bin QR codes when disposing of clean recyclables to earn academic 
+green credits redeemable for library perks or canteen discounts.	
+• 3. Solar-Powered Rotary Composter: Transition from the 5L pilot compost bin to a centralized 
+100-litre dual-chamber rotating composting drum installed near the campus botanical garden, 
+powered by a small solar PV aeration fan.	
+
+=== PAGE 32 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+27	
+Chapter 20 
+LEARNING OUTCOMES	
+ 
+The execution of this Project Management Micro-Project provided invaluable experiential learning, 
+enabling B.E. Semester V Information Technology students to bridge abstract management theory 
+with real-world engineering problem-solving.	
+Learning Domain	 Theoretical Concept Applied	 Demonstrated Engineering Competency	
+Project Management 
+Frameworks	
+PMBOK 7th Ed, WBS, Gantt Scheduling, 
+Critical Path Method (CPM).	
+Formulated 3-level WBS, sequenced 10 
+activities, mapped dependencies, and 
+controlled 8-week timeline.	
+Cost Engineering & 
+Budgeting	
+Itemized Cost Estimation, Contingency 
+Reserves, Cost-Benefit Analysis.	
+Delivered complete station at ₹1,670 INR vs 
+₹18,500 commercial baseline, staying within 
+budget.	
+Risk Management	 Probability-Impact Scoring, Risk Register, 
+Contingency Trigger Planning.	
+Identified 10 operational risks, enforced PPE 
+protocols, and achieved zero safety incidents.	
+Information Technology 
+Integration	
+Google Cloud Forms, Sheets formulas, QR 
+code tagging, Web Dashboards.	
+Engineered automated data collection pipeline 
+tracking daily waste inflow and diversion 
+metrics.	
+Environmental & Civic 
+Engineering	
+SWM Rules 2016, Circular Economy, Aerobic 
+Composting C:N ratios.	
+Achieved 88.5% landfill diversion rate and 
+established formal recycler supply chain.	
+
+=== PAGE 33 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+28	
+Chapter 21 
+CONCLUSION	
+ 
+This Project Management Micro-Project successfully demonstrates that sustainable solid waste 
+management on a large engineering college campus does not require capital-intensive machinery or 
+exorbitant expenditure. By applying core project management methodologies —structured Work 
+Breakdown Structures, rigorous Gantt scheduling, unambiguous RACI matrices, proactive risk 
+registers, and disciplined cost control —a 5-member student team engineered, fabricated, and 
+deployed an effective 3-stream waste segregation station within 8 weeks and under a budget of 
+₹1,670 INR.	
+The empirical findings from our 14-day pilot deployment in the IT Department corridor validate the 
+system's operational efficacy. The station diverted 88.5% of generated waste away from municipal 
+landfills, separating 4.1 kg/day of wet organic matter for composting and 2.8 kg/day of clean dry 
+recyclables for authorized reprocessing. Student segregation accuracy climbed from an initial 54% to 
+92% through clear bilingual visual signage, foot -pedal hands-free hygiene, and digital audit 
+monitoring.	
+The project stands as a reproducible, low-cost model that can be scaled across all 14 engineering 
+departments at L. D. College of Engineering and adapted by academic institutions across Gujarat. In 
+doing so, it embodies the spirit of the Swachh Bharat Mission, Mission LiFE, and statutory Solid 
+Waste Management Rules 2016, proving that engineering students can lead the transition toward 
+circular, zero-waste campuses.	
+
+=== PAGE 34 ===
+L. D. College of Engineering | B.E. IT Sem-V | Project Management Micro-Project	
+29	
+ 
+REFERENCES	
+	
+• [1] Ministry of Environment, Forest and Climate Change (MoEFCC), Government of India, 
+“Solid Waste Management Rules, 2016”, The Gazette of India, Extraordinary, Part II, Section 3, 
+Sub-section (ii), Notification S.O. 1357(E), New Delhi, April 8, 2016.	
+• [2] Central Pollution Control Board (CPCB), “Guidelines for the Implementation of Solid Waste 
+Management Rules, 2016: Categorization of Waste Generators and Segregation Protocols”, 
+Ministry of Environment, Forest and Climate Change, New Delhi, 2018.	
+• [3] Project Management Institute (PMI), A Guide to the Project Management Body of Knowledge 
+(PMBOK® Guide), 7th Edition, Project Management Institute, Newtown Square, PA, USA, 
+2021.	
+• [4] Ahmedabad Municipal Corporation (AMC), “Comprehensive Solid Waste Management 
+Master Plan & Bye-laws for Ahmedabad City”, Health & Solid Waste Directorate, Danapith, 
+Ahmedabad, Gujarat, 2020.	
+• [5] Gujarat Pollution Control Board (GPCB), “Annual Report on the Implementation of Solid 
+Waste Management Rules in the State of Gujarat”, Sector-10A, Gandhinagar, Gujarat, 2022.	
+• [6] Kerzner, H., Project Management: A Systems Approach to Planning, Scheduling, and 
+Controlling, 13th Edition, John Wiley & Sons, Hoboken, NJ, 2022.	
+• [7] World Bank, What a Waste 2.0: A Global Snapshot of Solid Waste Management to 2050, 
+Urban Development Series, World Bank Group, Washington, DC, 2018.	
+• [8] Bureau of Indian Standards (BIS), “IS 12402: Code of Practice for Solid Waste Management 
+on Educational and Institutional Campuses”, Manak Bhavan, New Delhi, 2019.	
+• [9] Raje, D. V., et al., “Techno-Economic Assessment of Decentralized Composting and Material 
+Recovery in Indian Academic Institutions”, Journal of Cleaner Production, Vol. 214, pp. 642 –
+653, 2019.	
+• [10] United Nations Environment Programme (UNEP), “Solid Waste Management: Source 
+Segregation and Circular Economy Pathways for Developing Cities”, UNEP International 
+Environmental Technology Centre (IETC), Osaka, Japan, 2021.	
+
